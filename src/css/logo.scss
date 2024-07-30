@@ -1,0 +1,16 @@
+.logo-circle-fill {
+  fill: #e74b7f;
+}
+.logo-text-color {
+  stroke: #ffffff;
+  stroke-width: 0.25;
+  stroke-miterlimit: 10;
+}
+.logo {
+  width: 10em;
+  height: 10em;
+  animation: bounceIn 0.6s;
+  transform: rotate(0deg) scale(1) translateZ(0);
+  transition: all 0.4s cubic-bezier(0.8, 1.8, 0.75, 0.75);
+  cursor: pointer;
+}

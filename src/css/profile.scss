@@ -1,0 +1,88 @@
+:root {
+  --margin-x: 16px; /* if you change this you must change the next two lines */
+  --jobs-post-container-max-width: 1400px; /* if you change this you must change; @media (max-width: 1432px) { */
+  --jobs-filter-container-max-width: 1024px; /* if you change this you must change; @media (max-width: 1056px) { */
+  --mobile-breakpoint: 1024px;
+
+  --listing-panel-height: 3500px;
+  --listing-gap: 36px;
+
+  --box-shadow-color: rgb(0 0 0 / 0.1);
+  --box-shadow: 0 10px 15px -3px var(--box-shadow-color),
+    0 4px 6px -4px var(--box-shadow-color);
+}
+
+html {
+  body,
+  body .prose {
+    .profile_grid {
+      display: grid;
+      grid-template-columns: repeat(16, 1fr);
+      grid-template-areas: 'side_nav side_nav side_nav main_content main_content main_content main_content main_content main_content main_content main_content main_content jobs_panel jobs_panel jobs_panel jobs_panel';
+      width: 100%;
+      margin: auto;
+      gap: 30px;
+      padding: 0;
+      margin-top: 50px;
+    }
+
+    .side_nav {
+      grid-area: side_nav;
+      //   > li details,
+      //   > li {
+      //     font-weight: bold;
+      //   }
+    }
+    .main_content {
+      grid-area: main_content;
+    }
+
+    .jobs_panel {
+      grid-area: jobs_panel;
+    }
+
+    //     @media (max-width: 1432px) {
+    //       .profile_grid.side_nav_container,
+    //       .profile_grid.job_post_header_container {
+    //         margin-left: var(--margin-x);
+    //         margin-right: var(--margin-x);
+    //       }
+    //     }
+    //     @media (max-width: 1056px) {
+    //       .profile_grid.job_post_search_container,
+    //       .profile_grid.job_post_header_container {
+    //         margin-left: var(--margin-x);
+    //         margin-right: var(--margin-x);
+    //       }
+    //     }
+
+    //     @media (max-width: 1024px) {
+    //       .profile_grid {
+    //         margin-left: var(--margin-x);
+    //         margin-right: var(--margin-x);
+    //         grid-template-columns: 1fr;
+    //         grid-template-areas:
+    //           'side_nav'
+    //           'main_content'
+    //           'jobs_panel';
+    //       }
+
+    //       .side_nav_container {
+    //         grid-template-areas:
+    //           'side_nav'
+    //           'main_content';
+    //       }
+
+    //       .job_post_search_container {
+    //         grid-template-areas:
+    //           'jobs_panel'
+    //           'main_content';
+    //       }
+    //       .job_post_header_container {
+    //         grid-template-areas:
+    //           'location_panel'
+    //           'applications_close_panel';
+    //       }
+    //     }
+  }
+}

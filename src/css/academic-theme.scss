@@ -1,0 +1,880 @@
+@import './logo.scss';
+// @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+:root {
+  --color-scheme: light;
+
+  --font-family: system-ui;
+
+  --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+  --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+  --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+  --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+  --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+  --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+  --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
+
+  --clr-primary-300: hsl(219, 76%, 55%);
+  --clr-primary-400: hsl(219, 76%, 40%);
+  --clr-primary-500: hsl(219, 76%, 25%);
+  --clr-secondary-300: hsl(269, 75%, 55%);
+  --clr-secondary-400: hsl(269, 75%, 40%);
+  --clr-secondary-500: hsl(269, 75%, 25%);
+  --clr-accent-200: hsl(358, 85%, 80%);
+  --clr-accent-300: hsl(358, 72%, 65%);
+  --clr-accent-400: hsl(358, 72%, 50%);
+  --clr-accent-500: hsl(358, 72%, 35%);
+
+  --aj-pink: #ff009d;
+  --aj-orange: hsl(29, 100%, 50%);
+
+  --color-primary: #e74b7f;
+  --color-primary-hover: #3b5683;
+  --color-primary-light: #fee1ab;
+  --color-gray-blue: #3b5683;
+  --bg-faq: #e5e7eb;
+}
+
+html {
+  color-scheme: var(--color-scheme);
+}
+
+html {
+  body,
+  body .prose {
+    .filter-item.hide_filtered {
+      display: none;
+    }
+
+    // display: grid;
+    // grid-template-rows: auto 1fr auto;
+    // min-height: 100vh;
+
+    // main,
+    // div {
+    //   align-self: stretch;
+    // }
+    // button[disabled].cursor-not-allowed {
+    //   cursor: not-allowed !important;
+    // }
+    time {
+      white-space: nowrap;
+    }
+    margin: 0;
+    font-family: var(--font-family) 'Open Sans', sans-serif;
+    font-size: var(--fs-400);
+    line-height: 1.6;
+
+    footer {
+      // position: relative;
+      // bottom: 0;
+      // width: 100%;
+      border-width: 0 !important;
+      border-radius: 0 !important;
+    }
+
+    .desktop-mode {
+      display: block;
+    }
+    .mobile-mode {
+      display: none;
+    }
+
+    .spacer {
+      height: 100px;
+    }
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .prose {
+      max-width: 100%;
+      padding: 0 1.2rem;
+    }
+
+    h1 {
+      color: var(--color-primary);
+    }
+    h2,
+    h2 a,
+    .hero h2 {
+      font-size: 30px;
+      color: var(--color-gray-blue);
+      line-height: 38px;
+    }
+    .faq h2 {
+      font-size: 21px;
+      color: var(--color-gray-blue);
+    }
+    h2 a:hover,
+    .faq h2:hover {
+      color: var(--color-primary);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 700;
+      margin-bottom: 1.8rem;
+    }
+    h2.aus-jobs-heading {
+      font-family: 'Dancing Script', cursive, 'Comic Sans MS', cursive,
+        sans-serif;
+      font-family: 'Arial';
+      color: #174f89;
+    }
+    p,
+    a,
+    button,
+    li,
+    p a {
+      font-size: 16px;
+    }
+    p.intro {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1.4rem;
+      color: #374151;
+      line-height: 1.6rem;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+    .text-1-cols {
+      column-count: 1;
+      column-gap: 40px;
+      column-width: 600px;
+    }
+    .text-col-2,
+    .text-2-cols {
+      column-count: 2;
+      column-gap: 40px;
+      column-width: 250px;
+    }
+    .text-col-3,
+    .text-3-cols {
+      column-count: 3;
+      column-gap: 80px;
+      column-width: 340px;
+    }
+    .text,
+    .text-4-cols {
+      column-count: 4;
+      column-gap: 40px;
+      column-width: 270px;
+    }
+
+    .blog-post p {
+      line-height: 30px;
+    }
+
+    blockquote {
+      position: relative;
+      font-style: italic;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      background-color: #f9f9f9;
+      border-left: 5px solid #0078d7; /* Adjust the color as needed */
+    }
+
+    blockquote::before,
+    blockquote::after {
+      content: open-quote;
+      font-size: 2em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+      color: #0078d7; /* Adjust the color as needed */
+    }
+
+    blockquote::after {
+      content: close-quote;
+    }
+
+    blockquote p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .sub-head {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      margin-bottom: 3rem;
+      color: var(--color-primary);
+    }
+
+    .faq {
+      background-color: var(--bg-faq);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      padding: 1rem 1.2rem;
+    }
+    .faq h2 {
+      font-size: 1.4rem;
+      margin: 0;
+      margin-bottom: 6px;
+    }
+    .faq p,
+    .faq ul,
+    .faq ol {
+      margin: 0;
+      margin-top: 8px;
+    }
+    .faq li {
+      padding: 0;
+    }
+
+    .dark {
+      @apply bg-gray-800 text-red-600;
+    }
+
+    .text-aj {
+      color: var(--color-primary);
+    }
+    .link-aj {
+      color: var(--color-primary);
+      text-decoration: underline;
+    }
+    .link-aj:hover {
+      color: var(--color-primary-hover);
+      text-decoration: none;
+    }
+    .link-nav {
+      text-decoration: none;
+    }
+    .link-nav:hover {
+      text-decoration: underline;
+    }
+    .alert .btn-aj,
+    .btn-aj {
+      background-color: var(--color-primary);
+      color: #fff;
+      border-radius: 100vmax;
+      text-decoration: none;
+    }
+    .btn-white {
+      background-color: white;
+      color: var(--color-primary);
+      border-radius: 100vmax;
+    }
+
+    .alert .btn-aj:hover,
+    .btn-aj:hover,
+    .btn-white:hover {
+      color: white;
+      background-color: var(--color-primary-hover);
+    }
+
+    .radio-aj:checked {
+      background-color: var(--aj-orange) !important;
+      border-color: var(--aj-orange) !important;
+    }
+
+    .alert {
+      column-span: all;
+    }
+    .pagination button:hover {
+      background-color: var(--color-primary-hover);
+      color: white;
+    }
+    label {
+      font-size: 1rem;
+    }
+
+    .grid1 {
+      columns: 4;
+      column-gap: 0;
+    }
+
+    .break {
+      break-before: column;
+    }
+
+    .wrapper p {
+      margin: 10px 0 10px 0;
+    }
+
+    .wrapper h2 {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .wrapper h3 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    iframe {
+      width: 100%;
+    }
+
+    .nav-icon,
+    .academic-award {
+      font-weight: bold;
+      width: 50px;
+    }
+
+    input {
+      position: relative;
+    }
+    input,
+    select,
+    textarea {
+      background-color: #fff !important;
+    }
+
+    .required {
+      color: red;
+      position: absolute;
+      inset: 0;
+      left: 6px;
+      top: 0px;
+      font-style: normal;
+      font-size: 16px;
+      width: 10px;
+      height: 20px;
+    }
+    .asterisk {
+      color: red;
+      position: relative;
+      top: 5px;
+      left: 0;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 0;
+    }
+
+    section h2,
+    section h3,
+    h3,
+    section h4 {
+      color: var(--color-primary);
+      margin-top: 1.5rem;
+    }
+    section h2 {
+      font-size: 1.8rem;
+    }
+    section h3 {
+      font-size: 1.4rem;
+    }
+    section h4 {
+      font-size: 1.1rem;
+      color: #757575;
+      font-weight: bold;
+    }
+    section p {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    section.template a {
+      color: rgb(0, 107, 213);
+      text-decoration: underline;
+      font-weight: bold;
+      font-weight: 600;
+    }
+    section.template .school-images {
+      display: flex;
+    }
+    section.template .school-images img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      margin-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    section.template .school-images img.school-logo {
+      max-width: 100px;
+    }
+    section.template .nomination-badge {
+      max-width: 140px;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    /* Email Template styles */
+    section.email-template .header {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    section.email-template .sub-header {
+      font-size: 18px;
+      font-style: italic;
+    }
+
+    /* Style for principal's name */
+    section.email-template .principal-name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* Style for paragraph text */
+    section.email-template p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Style for links */
+    section.email-template a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    /* Style for digital nomination badge */
+    section.email-template .nomination-badge {
+      max-width: 100px;
+    }
+
+    /* Style the unordered list */
+    section.template ul,
+    section ul,
+    .ul {
+      list-style-type: disc;
+      padding-left: 40px;
+    }
+
+    /* Style the list items */
+    section.template li,
+    section li,
+    .ul li {
+      margin-bottom: 8px;
+    }
+
+    .list-headings {
+      font-weight: bold;
+      margin-bottom: 8px;
+      margin-top: 16px;
+    }
+    .list-headings:first-child {
+      margin-top: 0;
+    }
+
+    .talent-pool input,
+    .talent-pool textarea,
+    .talent-pool select {
+      border: 1px solid #ccc;
+    }
+    .award-bullet {
+      line-height: 0;
+    }
+
+    /* AI Recruitment Page */
+    .icon-ai svg {
+      fill: var(--color-primary) !important;
+    }
+
+    .bg-aj {
+      background-color: var(--color-primary);
+    }
+
+    .text-aj {
+      color: var(--color-primary);
+    }
+    .btn-aj {
+      background-color: var(--color-primary);
+      color: #fff;
+      border-radius: 100vmax;
+    }
+    .btn-aj:hover {
+      background-color: var(--color-primary-hover) !important;
+    }
+
+    section.invoice-container {
+      padding: 10mm;
+      border: 1px solid #ccc;
+    }
+
+    // missing styles to come in from the old css file
+
+    .underline-full {
+      border-bottom: 1px solid var(--color-primary);
+    }
+
+    /* ############################### */
+    /* Top Universities Region Styles */
+    /* ############################### */
+    .regions h3 {
+      margin-top: 30px;
+      margin-bottom: 4px;
+    }
+    .regions li:first-child h3 {
+      margin-top: 0;
+    }
+    .regions * {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .regions li {
+      margin-bottom: 10px;
+      padding: 1px;
+    }
+    .regions li:hover a {
+      background-color: #e5e5e5;
+      text-decoration: underline;
+    }
+    .regions li:last-child {
+    }
+
+    .region {
+      background-color: var(--color-primary-light);
+      padding: 4px 12px;
+      border-radius: 100vmax;
+      border-color: var(--color-primary);
+      border-width: 1px;
+      margin-bottom: 24px;
+    }
+    .region:hover {
+      background-color: var(--aj-pink);
+      border-color: var(--aj-pink);
+      color: white;
+    }
+
+    .text-aj-pink {
+      color: var(--aj-pink);
+    }
+
+    /* ############################### */
+    /* Search Listing Styles */
+    /* ############################### */
+    .job_result,
+    .job_result * {
+      box-sizing: border-box;
+    }
+
+    .job_result section {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      gap: 20px;
+      padding: var(--listing-padding);
+      margin-top: 24px;
+      margin-bottom: var(--listing-margin-bottom);
+      max-height: var(--job_listing_height);
+    }
+
+    .job_result section .job_listing {
+      position: relative;
+      cursor: pointer;
+      min-width: 340px;
+      max-width: auto;
+    }
+
+    .job_result section .job_listing .card-listing {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: var(--content-padding);
+      border-radius: var(--listing-outer-radius);
+      border: var(--listing-border-width) var(--listing-border-style)
+        var(--listing-border-color);
+      box-shadow: var(--box-shadow-aj);
+      height: var(--job_listing_height);
+    }
+
+    .job_result section .job_listing .card-listing:hover {
+      border-color: var(--listing-border-hover);
+    }
+
+    .job_result section .job_listing.selected .card-listing {
+      border-color: var(--listing-border-selected);
+    }
+
+    .job_result section .job_post {
+      position: relative;
+      padding: 0;
+      border: var(--listing-border-width) var(--listing-border-style)
+        var(--listing-border-color);
+      border-radius: var(--listing-inner-radius);
+      margin-bottom: 1000px;
+      background-color: white;
+      z-index: 1;
+    }
+
+    // .job_result section .job_post .job_post_content {
+    // }
+
+    .job_result section .job_post .job_post_header {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      border-radius: 4px;
+      background-color: rgb(226 232 240); /* BG = bg-slate-200 */
+      padding: 24px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      margin-bottom: 16px;
+    }
+
+    .job_result section .selected + .job_post {
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .job_result section {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .job_result section .job_listing .card-listing {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .job_result section .job_listing.selected {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .job_result section .selected + .job_post {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-top: calc(
+          0px - calc(var(--listing-margin-bottom) + var(--listing-border-width))
+        );
+        margin-bottom: 0;
+      }
+    }
+
+    .job_result section .job_listing .card-listing-header {
+      display: flex;
+    }
+
+    .job_result section .job_listing .card-listing .card-listing-top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .job_result section .job_listing .card-listing-header figure {
+      display: grid;
+      place-items: center;
+      margin-right: 12px;
+    }
+    .job_result section .job_listing .card-listing-header figure,
+    .job_result section .job_listing .card-listing-header img {
+      max-width: var(--card-listing-image-dimensions);
+      max-height: var(--card-listing-image-dimensions);
+    }
+
+    .job_result section .job_listing .badge-featured {
+      --indent: -0.3rem;
+      position: absolute;
+      top: var(--indent);
+      right: var(--indent);
+      background-color: orange;
+      font-weight: 700;
+      color: white;
+      font-size: 10px;
+    }
+
+    .job_result section .job_listing .job-title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21px;
+      max-height: var(--card-listing-header-height);
+    }
+
+    .job_result section .job_listing .institute-name {
+      font-size: 13px;
+      font-weight: 700;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+
+    // .card-listing-footer {
+    /* position: absolute;
+      width: 100%;
+      bottom: 8px; */
+    // }
+
+    .job_result section .job_listing .card-location {
+      flex-grow: 1;
+      font-size: 12px;
+      color: rgb(106, 107, 107);
+      line-height: 1.3;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+    }
+
+    .job_result section .job_listing .applications-close {
+      text-align: center;
+      min-width: 96px;
+      padding: 4px 4px !important;
+      border: 1px solid rgb(203 213 225);
+      margin-left: 12px;
+    }
+
+    .expiry-date-heading {
+      font-size: 9px;
+      font-weight: 700;
+      color: rgb(106, 107, 107);
+      margin-bottom: 4px;
+      line-height: 10px;
+    }
+
+    .job_result section .job_listing .expiry-date {
+      font-weight: 700;
+      font-size: 12px;
+      color: rgb(106, 107, 107);
+      line-height: 12px;
+      margin: 0;
+    }
+
+    .job_result .JobDetail {
+      position: sticky;
+      top: 0;
+    }
+
+    .bg-aj {
+      background-color: var(--color-primary);
+    }
+
+    .text-aj {
+      color: var(--color-primary);
+    }
+    .btn-aj {
+      background-color: var(--color-primary);
+      color: #fff;
+      border-radius: 100vmax;
+    }
+    .btn-aj:hover {
+      background-color: var(--color-primary-hover) !important;
+    }
+
+    section.invoice-container {
+      padding: 10mm;
+      border: 1px solid #ccc;
+    }
+    .show-item,
+    .show-form {
+      display: block;
+    }
+
+    .hide-item,
+    .hide-form {
+      display: none;
+    }
+    .contact-number li {
+      padding: 10px 0;
+    }
+    .contact-number li strong {
+      display: inline-block;
+      font-weight: bold;
+      // width: 100px;
+      text-align: right;
+      margin-right: 16px;
+    }
+    .stat-icon {
+      width: 35px;
+      height: auto;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    .uni-jobs {
+      margin-right: 6px;
+    }
+
+    .hero-bg {
+      position: relative;
+      background-image: url('/home/aus-teacher.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .icon_share:hover > svg {
+      color: #ff0000; /* Replace with your hover color */
+    }
+    .stat {
+      background-color: white;
+    }
+    // .card-body {
+    //   background-color: white;
+    // }
+
+    @media (max-width: 1023px) {
+      .desktop-mode {
+        display: none;
+      }
+      .mobile-mode {
+        display: block;
+      }
+      .hero-wrapper {
+        margin-top: 80px;
+        margin-left: -1rem;
+        margin-right: -1rem;
+      }
+
+      @media (max-width: 604px) {
+        .wrapper {
+          .sentence {
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .hide-mobile {
+        display: none;
+      }
+    }
+    .blog-gradient {
+      position: absolute;
+      width: 100%;
+      height: 130px;
+      bottom: 0;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 20%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+    .card {
+      background-color: white;
+    }
+  }
+
+  .bg-slate-200 {
+    background-color: rgb(231, 237, 245); // adjusted tailwind color
+    // background-color: rgb(226 232 240); // actual tailwind color
+  }
+
+  // Employer Themes University Theme
+  .employer_panel {
+    // QUT styles
+    &.qut {
+      * {
+        color: white !important;
+      }
+      a {
+        color: yellow !important;
+        text-decoration: underline;
+      }
+      a:hover {
+        color: white !important;
+      }
+    }
+    // Bond Styles
+    &.bond {
+      * {
+        color: white !important;
+      }
+      a {
+        color: rgb(14, 96, 159) !important;
+        text-decoration: underline;
+      }
+      a:hover {
+        color: white !important;
+      }
+      h2 {
+        color: #3b5683 !important;
+      }
+    }
+  }
+}

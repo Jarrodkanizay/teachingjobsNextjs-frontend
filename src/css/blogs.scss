@@ -1,0 +1,13 @@
+html {
+  body,
+  body .prose {
+    .blog-content {
+      h2 {
+        margin-top: 50px;
+      }
+      h2:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

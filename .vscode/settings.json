@@ -1,0 +1,32 @@
+{
+  "css.validate": true,
+  "scss.validate": true,
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "cSpell.words": [
+    "Academicjobs",
+    "apptrkr",
+    "DHSI",
+    "École",
+    "Essaypro",
+    "hookform",
+    "iloveacademicjobs",
+    "jobelephant",
+    "lucide",
+    "neurodiversity",
+    "Pasifika",
+    "Polytechnique",
+    "rnaseq",
+    "Robina",
+    "sendemail",
+    "specialisation",
+    "Specialised",
+    "Speedo",
+    "tanstack",
+    "Teachingjobs",
+    "unijobs",
+    "vellore",
+    "Writessays"
+  ],
+  "liveServer.settings.port": 5501
+}
