@@ -35,6 +35,6 @@
     "src/app/(jobs)/jobs/[category]/[id]/page.js",
     "src/app/(location)/australia/jobs/page.js",
     "src/components/SearchResults2.js"
-  ],
+, "src/components/SearchResults.js"  ],
   "exclude": ["node_modules"]
 }

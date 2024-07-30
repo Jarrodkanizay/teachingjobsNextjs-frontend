@@ -9,21 +9,13 @@ import JobFilter from '@/components/JobFilter';
 import SearchLightbulbIcon from '@/components/icons/SearchLightbulbIcon';
 import SearchListResultsLoader from '@/components/loaders/SearchListResultsLoader';
 
-interface SearchResultsProps {
-  q: {
-    q?: string | 0;
-    l?: string | 0;
-  };
-  filterOff?: boolean;
-  searchMessage?: string;
-  lefthandView?: boolean;
-}
+
 export default function SearchResults({
   q,
   filterOff = false,
   searchMessage = 'Jobs Found',
   lefthandView = false
-}: SearchResultsProps) {
+}) {
   console.log('==============SearchResults==================');
   const [page, setPage] = useState(0);
   console.log('q1', q, page);
@@ -66,7 +58,7 @@ export default function SearchResults({
     enabled: data?.jobs?.length > 0,
   });
   let content;
-  const handlePageChange = (direction: any) => {
+  const handlePageChange = (direction) => {
     if (direction === 'prev') {
       setPage((prevPage) => Math.max(prevPage - 1, 0));
     } else if (direction === 'next') {
