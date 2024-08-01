@@ -148,7 +148,7 @@ export default function Page({ p = {}, forceClass = '', sidebarView = false }) {
   const [filter2, setfilter2] = useState([]);
 
   useEffect(() => {
-    console.log(151, { filter1 })
+    console.log({ filter1 })
     setfilterTypes1((p) => ({ ...p, ExecutiveJobs: false }));
     setfilterTypes1((p) => ({ ...p, PositionType: false }));
     setfilterTypes1((p) => ({ ...p, HRJobs: false }));
@@ -220,7 +220,7 @@ export default function Page({ p = {}, forceClass = '', sidebarView = false }) {
     AdministrationSupportJobs: 'Staff/Administration Jobs',
     HRJobs: 'HR Specialty',
     FacultyDepartmentJobs: 'Faculty/Department',
-    AcademicPositionType: 'Teaching and Lecturing Jobs',
+    AcademicPositionType: 'Faculty/Department',
     EmploymentType: 'Employment Type',
     InstitutionName: 'Institution Name',
     SalaryRange: 'Salary Range',
