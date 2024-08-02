@@ -173,7 +173,7 @@ export default function Page({ p = {}, forceClass = '', sidebarView = false }) {
     }
     if (filter1?.some((obj) => obj.filter?.includes('Teaching and Lecturing'))) {
       setfilterTypes1((p) => ({ ...p, AcademicPositionType: true }));
-      setfilterTypes1((p) => ({ ...p, PositionType: true }));
+      // setfilterTypes1((p) => ({ ...p, PositionType: true }));
     }
   }, [JSON.stringify(filter1)]);
 
