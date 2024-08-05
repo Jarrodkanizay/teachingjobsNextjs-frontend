@@ -133,6 +133,7 @@ export default function Page({ p = {}, forceClass = '', sidebarView = false }) {
   const filterType = {
    
     State: true,
+    OrganisationType: true,
     InstitutionName: true,
     EmploymentType: true,
     SalaryRange: true,
@@ -220,6 +221,7 @@ export default function Page({ p = {}, forceClass = '', sidebarView = false }) {
     FacultyDepartmentJobs: 'Faculty/Department',
     AcademicPositionType: 'Teaching and Lecturing Jobs',
     EmploymentType: 'Employment Type',
+    OrganisationType: 'Organisation Type',
     InstitutionName: 'Institution Name',
     SalaryRange: 'Salary Range',
     OnsiteRemote: 'Onsite/Remote',
