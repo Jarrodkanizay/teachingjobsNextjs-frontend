@@ -219,7 +219,7 @@ export default function Page({ p = {}, forceClass = '', sidebarView = false }) {
     AdministrationSupportJobs: 'Staff/Administration Jobs',
     HRJobs: 'HR Specialty',
     FacultyDepartmentJobs: 'Faculty/Department',
-    AcademicPositionType: 'Teaching and Lecturing Jobs',
+    AcademicPositionType: 'Teaching Types',
     EmploymentType: 'Employment Type',
     OrganisationType: 'Organisation Type',
     InstitutionName: 'Institution Name',
