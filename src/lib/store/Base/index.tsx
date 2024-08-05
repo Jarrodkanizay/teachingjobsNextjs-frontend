@@ -9,7 +9,7 @@ import axios from 'axios';
 export const baseURL = //'http://localhost:3500/api';
    process.env.NEXT_PUBLIC_DEPLOY_MODE === 'development'
      ? 'http://localhost:3500/api'
-    : 'https://api2.sciencejobs.com.au/api';//'http://localhost:3500/api'// 'https://api2.sciencejobs.com.au/api'; // //'https://api2.sciencejobs.com.au/api' //
+    : 'https://api.sciencejobs.com.au/api';//'http://localhost:3500/api'// 'https://api2.sciencejobs.com.au/api'; // //'https://api2.sciencejobs.com.au/api' //
 
 export const BaseApi = axios.create({
   baseURL,
