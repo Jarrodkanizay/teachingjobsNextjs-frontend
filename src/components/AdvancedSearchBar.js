@@ -146,7 +146,7 @@ export default function Page({ p = {}, forceClass = '', sidebarView = false }) {
 
   const [category, setCategory] = useState('');
   const [filter2, setfilter2] = useState([]);
-
+  console.log(149, { filterTypes })
   useEffect(() => {
     console.log(151, { filter1 })
     setfilterTypes1((p) => ({ ...p, ExecutiveJobs: false }));
@@ -156,8 +156,6 @@ export default function Page({ p = {}, forceClass = '', sidebarView = false }) {
     setfilterTypes1((p) => ({ ...p, FacultyDepartmentJobs: false }));
     setfilterTypes1((p) => ({ ...p, AcademicPositionType: false }));
     setfilterTypes1((p) => ({ ...p, thirdcategory: false }));
-    if (r === 'global' || r === 'Global' || r === '' || r === null)
-      setfilterTypes((p) => ({ ...p, Country: true }));
     if (category === 'AcademicPositionType')
       setfilterTypes1((p) => ({ ...p, thirdcategory: true }));
     if (filter1?.some((obj) => obj.filter?.includes('Executive '))) {
