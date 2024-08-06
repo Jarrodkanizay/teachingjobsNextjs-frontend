@@ -7,7 +7,11 @@ const Footer = () => {
         <div className=" text-white font-open-sans">
           <ul>
             <li className="text-white font-bold text-xl pb-1 ">Navigation</li>
-            {/* <li><a className="footer-nav__link" href="/">Home</a></li> */}
+            <li>
+              <a className="footer-nav__link" href="/">
+                Teaching Jobs
+              </a>
+            </li>
             {/* <li>
               <Link href="/">Home</Link>
             </li> */}
