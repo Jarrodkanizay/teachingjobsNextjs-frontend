@@ -23,6 +23,15 @@ const positionData = [
   //########################################################################################################################
   //########################################################################################################################
   {
+    Name: `principal jobs`,
+    Title: `Principal Jobs`,
+    Description: `We are seeking an experienced and visionary educational leader to serve as a Principal. The Principal plays a pivotal role in providing effective leadership, fostering a positive learning environment, and ensuring the achievement of educational goals and objectives.`,
+    Keyword: `Principal Jobs. Principal positions`,
+    content: `Find principal vacancies on Teaching Jobs, government websites, and through recruitment agencies specializing in educational leadership roles. For those aspiring to become principals, Australia offers a dynamic and rewarding environment to lead schools towards a bright and innovative future in education.`,
+    Image: `/banners/teaching-jobs-australia.jpg`,
+  },
+
+  {
     Name: `art teacher jobs`,
     state: ``,
     Title: `All Art teacher jobs in Australia`,
@@ -452,13 +461,6 @@ const positionData = [
     Description: `Vocational Education Managers are pivotal in the realm of vocational training. These professionals play a vital role in shaping the infrastructure, principles, contexts, and goals of vocational education programs. They apply their expertise in education, management, and vocational training to guide schools and educational institutions in achieving their vocational training objectives.`,
     Keyword: `Management - Vocational Jobs. Management - Vocational positions`,
     content: `Vocational Education Management Professionals are skilled individuals specializing in vocational education. They play a crucial role in overseeing the infrastructure, principles, contexts, and purposes of vocational training programs. These professionals leverage their expertise in education, management, and vocational fields to support schools and educational institutions in achieving their vocational training goals and objectives.`,
-  },
-  {
-    Name: `principal jobs`,
-    Title: `Principal Jobs`,
-    Description: `We are seeking an experienced and visionary educational leader to serve as a Principal. The Principal plays a pivotal role in providing effective leadership, fostering a positive learning environment, and ensuring the achievement of educational goals and objectives.`,
-    Keyword: `Principal Jobs. Principal positions`,
-    content: `Find principal vacancies on Teaching Jobs, government websites, and through recruitment agencies specializing in educational leadership roles. For those aspiring to become principals, Australia offers a dynamic and rewarding environment to lead schools towards a bright and innovative future in education.`,
   },
   {
     Name: `student services jobs`,

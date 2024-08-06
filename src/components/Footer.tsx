@@ -11,15 +11,15 @@ const Footer = () => {
               <Link href="/">Teaching Jobs</Link>
             </li>
             <li>
-              <Link href="/about/">About Teaching Jobs</Link>
+              <Link href="/about">About Teaching Jobs</Link>
             </li>
-            {/* <li><Link href="/school-career-advice/">Career Advice</Link></li>                     */}
+            {/* <li><Link href="/school-career-advice">Career Advice</Link></li>                     */}
             <li>
-              <Link href="/contact-us/">Contact Us</Link>
+              <Link href="/contact-us">Contact Us</Link>
             </li>
 
             <li>
-              <Link href="/sitemap/">Site Map</Link>
+              <Link href="/sitemap">Site Map</Link>
             </li>
           </ul>
         </div>
@@ -28,13 +28,13 @@ const Footer = () => {
           <ul>
             <li className="text-white font-bold text-xl pb-1">Job Seekers</li>
             <li>
-              <Link href="/jobs/">Find Jobs</Link>
+              <Link href="/jobs">Find Jobs</Link>
             </li>
             <li>
-              <Link href="/principal/">Principal Jobs</Link>
+              <Link href="/principal">Principal Jobs</Link>
             </li>
             <li>
-              <Link href="/employers/">Find Employers</Link>
+              <Link href="/employers">Find Employers</Link>
             </li>
           </ul>
         </div>
@@ -44,13 +44,9 @@ const Footer = () => {
             <li className="text-white font-bold text-xl pb-1 ">Schools</li>
 
             <li>
-              <a
-                target="_blank"
-                className="footer-nav__link"
-                href="/post-a-job/"
-              >
+              <Link className="footer-nav__link" href="/post-a-job">
                 Post a Job
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

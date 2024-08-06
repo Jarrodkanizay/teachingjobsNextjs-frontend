@@ -134,7 +134,7 @@ export default function Header() {
             onClick={() => setIsNavOpen(false)}
           /> */}
           <NavItem
-            url={`/principal`}
+            url={`/principal-jobs`}
             icon="/network-icon.svg"
             navLink="Principal Jobs"
             forceClass="border-b hover:border-[#e74b7f]" //this is optional
