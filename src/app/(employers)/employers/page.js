@@ -1,18 +1,18 @@
 // import React, { useState, useEffect, useRef } from 'react'
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import HeroBanner from '@/components/HeroBanner';
-import USA from '@/components/topUnis/USA';
-import Australia from '@/components/topUnis/Australia';
-import Africa from '@/components/topUnis/Africa';
-import Asia from '@/components/topUnis/Asia';
-import Canada from '@/components/topUnis/Canada';
-import UK from '@/components/topUnis/UK';
-import SA from '@/components/topUnis/SA';
-import NZ from '@/components/topUnis/NZ';
-import ME from '@/components/topUnis/ME';
-import India from '@/components/topUnis/India';
-import Europe from '@/components/topUnis/Europe';
+// import USA from '@/components/topUnis/USA';
+// import Australia from '@/components/topUnis/Australia';
+// import Africa from '@/components/topUnis/Africa';
+// import Asia from '@/components/topUnis/Asia';
+// import Canada from '@/components/topUnis/Canada';
+// import UK from '@/components/topUnis/UK';
+// import SA from '@/components/topUnis/SA';
+// import NZ from '@/components/topUnis/NZ';
+// import ME from '@/components/topUnis/ME';
+// import India from '@/components/topUnis/India';
+// import Europe from '@/components/topUnis/Europe';
 
 export const metadata = {
   // title: 'About', //Option 1 replaces the %s in layout.tsx
@@ -41,7 +41,9 @@ export default function myPage() {
         imgRight={false}
       />
 
-<h2 className="underline-full mt-6 max-w-screen-xl mx-auto ">Top Schools to work for</h2>
+      <h2 className="underline-full mt-6 max-w-screen-xl mx-auto ">
+        Top Schools to work for
+      </h2>
       <div className="cate-group section23 ">
         <div className="widget__text-block">
           <div className="max-w-screen-xl mx-auto faculty-container grid-cols-2 grid md:grid-cols-4 gap-8 py-2 px-7">
@@ -178,9 +180,7 @@ export default function myPage() {
                     </Link>
                   </li>
                   <li className="mb-2 ">
-                    <Link href="/employers/">
-                      Fintona girls school
-                    </Link>
+                    <Link href="/employers/">Fintona girls school</Link>
                   </li>
                 </ul>
               </ul>
@@ -266,7 +266,10 @@ export default function myPage() {
                   </li>
                 </ul>
                 <li className="mb-1 mt-4">
-                  <Link href="/northern-territory/" className="text-[#e74b7f] font-bold">
+                  <Link
+                    href="/northern-territory/"
+                    className="text-[#e74b7f] font-bold"
+                  >
                     Nothern Territory
                   </Link>
                 </li>

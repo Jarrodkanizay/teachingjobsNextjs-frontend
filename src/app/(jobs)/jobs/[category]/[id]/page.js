@@ -2,16 +2,16 @@ import { notFound } from 'next/navigation';
 import SearchResults from '@/components/SearchResults';
 import JobSearchBox2 from '@/components/JobSearchBox2';
 import HeadlineUpgrade from '@/components/forms/HeadlineUpgrade';
-import HeadlineLinks from '@/components/HeadlineLinks';
-import InputBlock from '@/components/forms/InputBlock';
+// import HeadlineLinks from '@/components/HeadlineLinks';
+// import InputBlock from '@/components/forms/InputBlock';
 import Link from 'next/link';
 import Image from 'next/image';
-import { BsFillShareFill } from 'react-icons/bs';
+// import { BsFillShareFill } from 'react-icons/bs';
 import Button from './Button';
-import { CloudCog } from 'lucide-react';
+// import { CloudCog } from 'lucide-react';
 import RequestFullJobForm from '@/components/forms/RequestFullJobForm';
-import { useSearchParams } from 'next/navigation';
-import MapMarkerIcon from '@/components/icons/MapMarkerIcon';
+// import { useSearchParams } from 'next/navigation';
+// import MapMarkerIcon from '@/components/icons/MapMarkerIcon';
 import FavoriteButton from '@/components/FavoriteButton';
 import { StarRank } from '@/components/StarRank';
 import { baseURL } from '@/lib/store/Base';
@@ -33,10 +33,9 @@ export async function generateMetadata({ params }) {
 
 async function getJob(id) {
   //const response = await BaseApi.get(`/job/${id}`);
-  const response = await fetch(
-    `${baseURL}/job/${id}`,
-    { next: { revalidate: 0 } }
-  );
+  const response = await fetch(`${baseURL}/job/${id}`, {
+    next: { revalidate: 0 },
+  });
   const res = await response.json();
   // console.log(res);
   return res;
@@ -67,7 +66,6 @@ const JobDetailPage = async ({ params, searchParams }) => {
   } = job.data;
   console.log('ranking==============', ranking);
 
-
   let bgColor = 'bg-white';
   if (company_name === 'Bond University') bgColor = 'bg-[#011a4d]';
 
@@ -83,12 +81,11 @@ const JobDetailPage = async ({ params, searchParams }) => {
                   ?.replace(/\W+/g, '-')
                   .toLowerCase()}/${employer_id}/`}
               >
-                <div
-                  className={` rounded-lg p-4 bg-white`}
-                >
+                <div className={` rounded-lg p-4 bg-white`}>
                   <Image
-                    src={`https://academicjobs.s3.amazonaws.com/img/university-logo/${logo || 'favicon.jpg'
-                      }`}
+                    src={`https://academicjobs.s3.amazonaws.com/img/university-logo/${
+                      logo || 'favicon.jpg'
+                    }`}
                     alt={company_name}
                     width={170}
                     height={170}
@@ -98,8 +95,9 @@ const JobDetailPage = async ({ params, searchParams }) => {
             </div>
             <div className="w-[85%]">
               <div className="flex">
-
-                <h1 className="flex-1 text-2xl font-bold mb-2 text-black">{title}</h1>
+                <h1 className="flex-1 text-2xl font-bold mb-2 text-black">
+                  {title}
+                </h1>
                 <div className="applications_close_panel w-[13rem] h-[4rem] mt-3 hidden lg:block">
                   <h6>Applications Close</h6>
                   <div className="text-sm">
@@ -124,24 +122,29 @@ const JobDetailPage = async ({ params, searchParams }) => {
                 </h4>
                 <section className="ranking flex flex-row">
                   <StarRank ranking={ranking} />
-
                 </section>
                 <div className="lg:hidden block flex justify-center">
                   <section className="mt-2 gap-2 w-[20rem] ">
                     <div className="lg:hidden block">
                       <div className=" ">
-                        <p className="text-sm underline font-light"> Applications Close: {expiration_date ? (
-                          <time>
-                            {new Date(expiration_date).toLocaleDateString('en-US', {
-                              month: 'short',
-                              day: 'numeric',
-                              year: 'numeric',
-                            })}
-                          </time>
-                        ) : (
-                          <p className="text-center">TBA</p>
-                        )}</p>
-
+                        <p className="text-sm underline font-light">
+                          {' '}
+                          Applications Close:{' '}
+                          {expiration_date ? (
+                            <time>
+                              {new Date(expiration_date).toLocaleDateString(
+                                'en-US',
+                                {
+                                  month: 'short',
+                                  day: 'numeric',
+                                  year: 'numeric',
+                                }
+                              )}
+                            </time>
+                          ) : (
+                            <p className="text-center">TBA</p>
+                          )}
+                        </p>
                       </div>
                     </div>
                   </section>
@@ -150,7 +153,10 @@ const JobDetailPage = async ({ params, searchParams }) => {
 
               <div className="flex mt-2 pl-2 items-center justify-start md:gap-3 gap-2 ml-[-10px] max-[395px]:ml-[-17px]">
                 {headlineOnly ? (
-                  <Link href="#request-job-post" className="btn btn-aj h-[32px]">
+                  <Link
+                    href="#request-job-post"
+                    className="btn btn-aj h-[32px]"
+                  >
                     Apply Now
                   </Link>
                 ) : (
@@ -160,7 +166,7 @@ const JobDetailPage = async ({ params, searchParams }) => {
                     how_to_apply={how_to_apply}
                   />
                 )}
-                <ShareButton jobId={jobId}/>
+                <ShareButton jobId={jobId} />
 
                 <FavoriteButton />
               </div>
@@ -178,18 +184,21 @@ const JobDetailPage = async ({ params, searchParams }) => {
               {
                 <>
                   <div
-                    className={`${!headlineOnly || active ? 'job-content block' : 'hidden'
-                      }`}
+                    className={`${
+                      !headlineOnly || active ? 'job-content block' : 'hidden'
+                    }`}
                     dangerouslySetInnerHTML={{ __html: description }}
                   />
                   <div
-                    className={`flex flex-col ${headlineOnly && !active ? 'block' : 'hidden'
-                      }`}
+                    className={`flex flex-col ${
+                      headlineOnly && !active ? 'block' : 'hidden'
+                    }`}
                   >
-                    <span className="text-gray-700 text-[16px] m-0 mb-6">This job posting has not been sponsored, enter your email below to be sent the full post.</span>
-
+                    <span className="text-gray-700 text-[16px] m-0 mb-6">
+                      This job posting has not been sponsored, enter your email
+                      below to be sent the full post.
+                    </span>
                     <div className="flex justify-center items-center flex-wrap">
-
                       <div className="grow">
                         <RequestFullJobForm
                           formName="Request Full Job Post"
