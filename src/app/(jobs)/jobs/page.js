@@ -1,27 +1,22 @@
-import Jobs from "./jobs";
-// import { universityJobsData } from '@/data/universityJobsData';
-// export async function generateMetadata({ params, searchParams }) {
-//     let { r } = searchParams;
+import Jobs from './jobs';
+import HeroBannerGhostedBlock from '@/components/HeroBannerGhostedBlock';
 
-//     const {
-//         Name = '',
-//         Title = '',
-//         Description = '',
-//         Keyword = '',
-//         content: content1 = '',
-//         image = '',
-//     } = universityJobsData.find((item) => item.Name === r) || {};
-//     return {
-//         title: Title,
-//         description: Description,
-//         keywords: Keyword,
-//     };
-// }
+const localObj = {
+  Title: 'All Teaching Jobs in Australia',
+  h1: 'Teaching Jobs Australia',
+  content:
+    'Find top Teaching Jobs in Australia at leading private, Catholic, and independent schools. Join a rewarding profession that offers flexible hours, competitive salaries, excellent employee benefits, and ongoing professional development opportunities.',
+  Image: '/banners/teacher-aide-jobs-sydney.jpg',
+  alt: '',
+  //   type: '',
+};
 
 export default function Page({ searchParams }) {
-    return (
-        <div>
-            <Jobs />
-        </div>
-    );
+  return (
+    <main>
+      <HeroBannerGhostedBlock heroItem={localObj} forceClass="mb-10" />
+
+      <Jobs />
+    </main>
+  );
 }

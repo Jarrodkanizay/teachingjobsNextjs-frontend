@@ -33,7 +33,7 @@ html {
 
     .job_post_search_container {
       max-width: var(--jobs-filter-container-max-width);
-      grid-template-areas: 'filters_panel filters_panel filters_panel listings_panel listings_panel listings_panel listings_panel listings_panel listings_panel listings_panel listings_panel listings_panel';
+      grid-template-areas: 'filters_panel filters_panel filters_panel filters_panel listings_panel listings_panel listings_panel listings_panel listings_panel listings_panel listings_panel listings_panel';
     }
 
     .job_post_header_container {

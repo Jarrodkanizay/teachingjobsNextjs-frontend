@@ -111,6 +111,10 @@ html {
     .faq h2:hover {
       color: var(--color-primary);
     }
+    .hero_banner_overlay {
+      filter: brightness(30%) sepia(1) hue-rotate(290deg) saturate(6)
+        contrast(1);
+    }
     h1,
     h2,
     h3,
@@ -837,6 +841,64 @@ html {
     }
     .card {
       background-color: white;
+    }
+    .fill-aj {
+      fill: var(--aj-orange);
+    }
+    .fill-pink {
+      fill: var(--aj-pink);
+    }
+    .links_section {
+      h2 {
+        font-size: 1.2rem;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0.5rem;
+        color: var(--color-gray-blue);
+      }
+      li {
+        padding: 0;
+        margin: 0;
+      }
+      p {
+        font-size: 1rem;
+        padding: 0;
+        margin: 0;
+        line-height: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      a:hover {
+        color: var(--clr-secondary-300);
+      }
+      li {
+        margin: 0;
+      }
+
+      .generic_icon {
+        width: 1.2rem;
+      }
+    }
+    .generic_icon {
+      display: inline-block;
+      fill: var(--aj-orange);
+    }
+    a:hover .generic_icon,
+    .generic_icon:hover {
+      fill: var(--aj-pink);
+    }
+
+    .pink_icon {
+      fill: var(--aj-pink);
+    }
+    a:hover .pink_icon,
+    .pink_icon:hover {
+      fill: var(--clr-secondary-300);
     }
   }
 

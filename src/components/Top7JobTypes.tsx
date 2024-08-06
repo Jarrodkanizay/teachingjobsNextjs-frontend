@@ -7,55 +7,40 @@ import { useState, useEffect } from 'react';
 import { useStore } from '@/lib/store/store';
 
 export default function JobSearchBox() {
- 
-const { region } = useStore();
-
-          
+  const { region } = useStore();
 
   const size = 120;
   const items = [
     {
       src: '/home/teacher2.jpeg',
-      alt: 'early childhood',
+      alt: 'Early Childhood Teachers',
       label: 'Early Childhood',
-      link: `/early-childhood`,
+      link: `/early-childhood-jobs`,
     },
     {
       src: '/home/academic-student-positions.png',
-      alt: 'primary Positions',
+      alt: 'Primary School Positions',
       label: 'Primary',
-      link: `/primary`,
+      link: `/primary-jobs`,
     },
     {
       src: '/home/teacher3.jpeg',
-      alt: 'secondary',
+      alt: 'Secondary School Jobs',
       label: 'Secondary',
-      link: `/secondary`,
+      link: `/secondary-jobs`,
     },
     {
       src: '/home/teacher-4.jpg',
-      alt: 'relief-teaching',
-      label: 'Relief Teaching',
-      link: `/relief-teaching-jobs`,
+      alt: 'Teacher Aide Jobs',
+      label: 'Teacher Aide',
+      link: `/teacher-aide-jobs`,
     },
     {
       src: '/home/teacher1.jpeg',
-      alt: 'administrative Positions',
+      alt: 'Administrative Positions',
       label: 'Admin',
-      link: `/admin`,
+      link: `/admin-jobs`,
     },
-    // {
-    //   src: '/home/academic-graduate-positions.png',
-    //   alt: 'Academic PhD Positions',
-    //   label: 'Student',
-    //   link: `${region}/student-jobs`,
-    // },
-    // {
-    //   src: '/home/academic-lecturer-positions.png',
-    //   alt: 'Academic Graduate Positions',
-    //   label: 'Industry',
-    //   link: `${region}/Industry`,
-    // },
   ];
   return (
     <div className="hero-bg md:bg-center ">
@@ -76,18 +61,23 @@ const { region } = useStore();
       </section>
       <ul className="hero-icons lg:flex flex-wrap md:gap-8 mx-auto text-center items-center justify-center md:mt-[-2rem] mt-[-11rem] hidden ">
         {items.map((item, index) => (
-          
-          <li className=" text-[#334680] font-bold hover:font-light hover:text-blue-900 hover:grayscale-0" key={index}>
-            <Link className=" rounded-full grayscale hover:grayscale-0 " href={item.link}>
-              <Image  className=" rounded-full " src={item.src} width={size} height={size} alt={item.alt} />
-            </Link>
-            <Link className="mb-4  text-blue-900 " href={item.link}>
-              <p>{item.label}</p>
+          <li key={index}>
+            <Link
+              className="rounded-full grayscale hover:grayscale-0 font-medium text-[#334680] hover:text-[#e74b7f]"
+              href={item.link}
+            >
+              <Image
+                className=" rounded-full "
+                src={item.src}
+                width={size}
+                height={size}
+                alt={item.alt}
+              />
+              <p className="mt-2">{item.label}</p>
             </Link>
           </li>
         ))}
       </ul>
-
 
       <ul className="hero-icons flex gap-4 md:gap-8 mx-auto text-center items-center justify-center lg:mt-0 mt-[-5rem] lg:hidden text-[#334680]">
         <li>
@@ -108,7 +98,10 @@ const { region } = useStore();
           </a>
         </li>
         <li>
-          <a className="grayscale hover:grayscale-0 rounded-full" href="/primary">
+          <a
+            className="grayscale hover:grayscale-0 rounded-full"
+            href="/primary"
+          >
             <Image
               alt="Academic Faculty Positions"
               loading="lazy"
@@ -125,7 +118,10 @@ const { region } = useStore();
           </a>
         </li>
         <li>
-          <a className="grayscale hover:grayscale-0 rounded-full" href="/secondary">
+          <a
+            className="grayscale hover:grayscale-0 rounded-full"
+            href="/secondary"
+          >
             <Image
               alt="Academic Staff Positions"
               loading="lazy"
