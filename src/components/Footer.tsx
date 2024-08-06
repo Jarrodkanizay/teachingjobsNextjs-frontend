@@ -8,13 +8,8 @@ const Footer = () => {
           <ul>
             <li className="text-white font-bold text-xl pb-1 ">Navigation</li>
             <li>
-              <a className="footer-nav__link" href="/">
-                Teaching Jobs
-              </a>
+              <Link href="/">Teaching Jobs</Link>
             </li>
-            {/* <li>
-              <Link href="/">Home</Link>
-            </li> */}
             <li>
               <Link href="/about/">About Teaching Jobs</Link>
             </li>
