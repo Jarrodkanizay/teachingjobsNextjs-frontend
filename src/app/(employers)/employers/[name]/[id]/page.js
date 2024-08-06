@@ -3,10 +3,10 @@ import { MdLocationPin } from 'react-icons/md';
 import { AiOutlineGlobal } from 'react-icons/ai';
 import SearchResults from '@/components/SearchResults';
 import JobSearchBox2 from '@/components/JobSearchBox2';
-import JobFilter from '@/components/JobFilter';
+// import JobFilter from '@/components/JobFilter';
 import Image from 'next/image';
-import Link from 'next/link';
-import { useParams } from 'next/navigation';
+// import Link from 'next/link';
+// import { useParams } from 'next/navigation';
 import { StarRank } from '@/components/StarRank';
 
 export async function generateMetadata({ params }) {
@@ -15,7 +15,8 @@ export async function generateMetadata({ params }) {
   const { company_name } = employer?.data;
   return {
     title: {
-        absolute: `All jobs at ${company_name} `},
+      absolute: `All jobs at ${company_name} `,
+    },
     description: `All the university jobs at ${company_name} Academic and administration jobs.  Lecturer and research higher ed careers.`,
     keywords: `${company_name} jobs, ${company_name} careers, ${company_name} positions,  Work at ${company_name}`,
   };
