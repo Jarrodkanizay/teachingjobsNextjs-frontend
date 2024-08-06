@@ -35,7 +35,7 @@
     "cmdk": "^0.2.0",
     "daisyui": "^4.4.24",
     "lucide-react": "^0.303.0",
-    "next": "^14.2.4",
+    "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
     "react-google-autocomplete": "^2.7.3",
