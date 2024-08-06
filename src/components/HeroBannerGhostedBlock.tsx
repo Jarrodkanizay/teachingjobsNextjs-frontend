@@ -37,7 +37,7 @@ const HeroBannerGhostedBlock = ({
           className={`full-width p-8 flex flex-wrap items-center justify-center gap-2 overflow-x-hidden bg-cover bg-center bg-sky-500 mb-8 ${forceClass}`}
           style={{
             backgroundImage: `url(${
-              imageSrc ? imageSrc : '/banners/generic-glass-building.jpg'
+              imageSrc ? imageSrc : '/banners/teaching-jobs-australia.jpg'
             })`,
 
             backgroundSize: `cover`,
@@ -58,7 +58,7 @@ const HeroBannerGhostedBlock = ({
       {type === undefined || type === 'country' ? (
         <div className={`full-width relative bg-pink-700 ${forceClass}`}>
           <Image
-            src={imageSrc}
+            src={imageSrc ? imageSrc : '/banners/teaching-jobs-australia.jpg'}
             alt={alt}
             className="hero_banner_overlay full-width h-full object-cover object-center absolute top-0 left-0"
             width={1920}

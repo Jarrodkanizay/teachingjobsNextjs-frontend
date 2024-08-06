@@ -140,7 +140,7 @@ export default function Page({ params, searchParams }: any) {
   //console.log(company_description)
   content = (
     <div className="content-grid flex-col md:gap-2">
-      <HeroBannerGhostedBlock heroItem={localObj} />
+      <HeroBannerGhostedBlock heroItem={localObj} forceClass="mb-8" />
 
       <JobSearchBox />
 
