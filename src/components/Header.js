@@ -120,7 +120,7 @@ export default function Header() {
           <NavItem
             url={`/jobs`}
             icon="/dotted-arrow.svg"
-            navLink="Job Search"
+            navLink="Teaching Jobs"
             forceClass="border-b hover:border-[#e74b7f]" //this is optional
             forceButtonClass="border-b hover:border-[#e74b7f] mr-2 "
             onClick={() => setIsNavOpen(false)}

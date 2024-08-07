@@ -7,6 +7,7 @@ import HeroBannerGhostedBlock from '@/components/HeroBannerGhostedBlock';
 import LinkIcon from '@/components/icons/LinkIcon';
 import JobFilter from '@/components/JobFilter';
 import Link from 'next/link';
+import AdvancedSearchBar from '@/components/AdvancedSearchBar';
 
 function toTitleCase(str: string) {
   return str.toLowerCase().replace(/(?:^|\s)\w/g, function (match: string) {
@@ -142,7 +143,8 @@ export default function Page({ params, searchParams }: any) {
     <div className="content-grid flex-col md:gap-2">
       <HeroBannerGhostedBlock heroItem={localObj} forceClass="mb-8" />
 
-      <JobSearchBox />
+      {/* <JobSearchBox /> */}
+      <AdvancedSearchBar forceClass="block" type="advancedSearch" />
 
       <section className="jobs_grid job_post_search_container mx-auto">
         <div className="filters_panel pt-12">
@@ -191,7 +193,7 @@ export default function Page({ params, searchParams }: any) {
         </div>
         <div className="listings_panel">
           <div className="listings_content">
-            <SearchResults q={{ q: '', l: '', filter1 }} />
+            <SearchResults q={{ q: '', l: category2, filter2 }} />
           </div>
         </div>
       </section>
