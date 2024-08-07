@@ -136,15 +136,24 @@ export default function Page({ params, searchParams }: any) {
   let shortName = categoryProperCase;
 
   let content: any;
-  //console.log(Name);
+  console.log({ category2, filter2 });
   //const { logo, company_name, website, company_description, location } = data
   //console.log(company_description)
   content = (
     <div className="content-grid flex-col md:gap-2">
       <HeroBannerGhostedBlock heroItem={localObj} forceClass="mb-8" />
-
+      <AdvancedSearchBar
+        p={{
+          r: region,
+          filter1: [
+            {
+              category: category2,
+              filter: filter2,
+            },
+          ],
+        }}
+      />
       {/* <JobSearchBox /> */}
-      <AdvancedSearchBar forceClass="block" type="advancedSearch" />
 
       <section className="jobs_grid job_post_search_container mx-auto">
         <div className="filters_panel pt-12">
