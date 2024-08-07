@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
 }
 async function getEmployer(id) {
   const response = await fetch(
-    `https://api.sciencejobs.com.au/api/employer/${id}`,
+    `https://api.sciencejobs.com.au/api/employerById/${id}`,
     { next: { revalidate: 1 } }
   );
   const res = await response.json();
