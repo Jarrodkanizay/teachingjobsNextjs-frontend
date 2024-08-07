@@ -1,11 +1,11 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import LogoAJ from '@/components/brand/Logo';
+// import LogoAJ from '@/components/brand/Logo';
 import NavItem from '@/components/NavItem';
-import DispatchLink from '@/components/DispatchLink';
+// import DispatchLink from '@/components/DispatchLink';
 import { useStore } from '@/lib/store/store';
 import HamburgerMenuIcon from '@/components/icons/HamburgerMenuIcon';
 import Logo from '@/components/brand/Logo';
