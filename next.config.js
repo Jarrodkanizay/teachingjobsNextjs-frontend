@@ -1,15 +1,67 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: [
-      'academicjobs.s3.amazonaws.com',
-      'res.cloudinary.com',
-      'iloveacademicjobs.com',
-      'uniiq.com',
-      'www.qut.edu.au',
-      'www.academicjobs.com',
-      'images.all-free-download.com',
-      'dentalstudents.com.au',
+    // domains: [
+    //   'academicjobs.s3.amazonaws.com',
+    //   'res.cloudinary.com',
+    //   'iloveacademicjobs.com',
+    //   'uniiq.com',
+    //   'www.qut.edu.au',
+    //   'www.academicjobs.com',
+    //   'images.all-free-download.com',
+    //   'dentalstudents.com.au',
+    // ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.daisyui.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'academicjobs.s3.amazonaws.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'iloveacademicjobs.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'uniiq.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.qut.edu.au',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.academicjobs.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.all-free-download.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'dentalstudents.com.au',
+        port: '',
+      },
     ],
   },
   async redirects() {
@@ -474,7 +526,7 @@ const nextConfig = {
       // destination: 'https://www.academicjobs.com/career-help',
       // permanent: true,
       // },
-     
+
       {
         source: '/australia',
         destination: 'https://www.academicjobs.com/australia',
