@@ -303,6 +303,11 @@ const positionData = [
     h2_footer: `Science Teacher Opportunities in Australia`,
     content_footer: `Dive into a fulfilling career as a science teacher in primary and secondary schools. As a science teacher, you can inspire young minds across various scientific subjects such as biology, physics and chemistry. Science teachers often create lesson plans, lead hands-on experiments and assess students' knowledge by marking tests and assignments. To qualify, you need a bachelor’s degree in Education. Ready to inspire the next generation? Apply now!`,
     type: `country`,
+    filter: {
+      l: 'Melbourne',
+    },
+    category2: 'subject',
+    filter2: 'science',
   },
   {
     Name: `teacher aide jobs`,

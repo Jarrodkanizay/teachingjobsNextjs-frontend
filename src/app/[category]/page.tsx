@@ -7,6 +7,7 @@ import HeroBannerGhostedBlock from '@/components/HeroBannerGhostedBlock';
 import LinkIcon from '@/components/icons/LinkIcon';
 import JobFilter from '@/components/JobFilter';
 import Link from 'next/link';
+import AdvancedSearchBar from '@/components/AdvancedSearchBar';
 
 function toTitleCase(str: string) {
   return str.toLowerCase().replace(/(?:^|\s)\w/g, function (match: string) {
@@ -135,14 +136,24 @@ export default function Page({ params, searchParams }: any) {
   let shortName = categoryProperCase;
 
   let content: any;
-  //console.log(Name);
+  console.log({ category2, filter2 });
   //const { logo, company_name, website, company_description, location } = data
   //console.log(company_description)
   content = (
     <div className="content-grid flex-col md:gap-2">
       <HeroBannerGhostedBlock heroItem={localObj} forceClass="mb-8" />
-
-      <JobSearchBox />
+      <AdvancedSearchBar
+        p={{
+          r: region,
+          filter1: [
+            {
+              category: category2,
+              filter: filter2,
+            },
+          ],
+        }}
+      />
+      {/* <JobSearchBox /> */}
 
       <section className="jobs_grid job_post_search_container mx-auto">
         <div className="filters_panel pt-12">
