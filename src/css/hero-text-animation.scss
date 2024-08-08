@@ -1,99 +1,68 @@
 /*Wrapper*/
 .wrapper {
   position: relative;
-  
-  background-color: transparent;
-  height: 90%;
-  align-items: center;
   max-width: 700px;
-  margin: auto;
-  padding-left: 16px;
+
+  // background-color: transparent;
+  // height: 90%;
+  // align-items: center;
+  // margin: auto;
+  // padding-left: 16px;
 
   /*Sentence*/
   .sentence {
     color: #183762;
-    font-size: 36px;
+    font-size: 3dvw;
+    letter-spacing: 1.5dvw;
+    margin-left: -25dvw;
     text-align: left;
     font-family: 'Noto Sans Lao Looped', sans-serif;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
     text-transform: uppercase;
-    letter-spacing: 20px;
   }
 
-  @media (max-width: 604px) {
+  // @media (max-width: 604px) {
+  //   font-weight: 600;
+  //   .wrapper {
+  //     .sentence {
+  //       font-size: 20px;
+  //     }
+  //   }
+  // }
+
+  @media (max-width: 926px) {
     .wrapper {
       .sentence {
-        font-size: 20px;
-        font-weight: 600;
+        font-size: 4dvw;
+        margin-left: -32dvw;
       }
     }
   }
-
-  .sentence-aus {
-    color: black;
-    font-size: 16px;
-    
-    font-family: 'Noto Sans Lao Looped', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 10px;
+  @media (max-width: 720px) {
+    .wrapper {
+      margin-top: -5dvw;
+      .sentence {
+        font-size: 5dvw;
+      }
+    }
   }
-
-  .sentence-usa {
-    color: black;
-    font-size: 16px;
-    
-    font-family: 'Noto Sans Lao Looped', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-  }
-  .sentence-uk {
-    color: black;
-    font-size: 16px;
-    
-    font-family: 'Noto Sans Lao Looped', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-  }
-  .sentence-eu {
-    color: black;
-    font-size: 16px;
-    
-    font-family: 'Noto Sans Lao Looped', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-  }
-  .sentence-ca {
-    color: black;
-    font-size: 16px;
-    
-    font-family: 'Noto Sans Lao Looped', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 10px;
+  @media (max-width: 500px) {
+    .wrapper {
+      margin-top: -5dvw;
+      .sentence {
+        font-size: 5dvw;
+        margin-left: -38dvw;
+      }
+    }
   }
 
   /*Vertical Sliding*/
   .slidingVertical {
     display: inline;
-   
   }
- 
+
   .slidingVertical span {
     animation: topToBottom 12.5s linear infinite 0s;
     -ms-animation: topToBottom 12.5s linear infinite 0s;

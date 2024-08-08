@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import JobSearchBoxHome from '@/components/JobSearchBoxHome';
-import Top7JobTypes from '@/components/Top7JobTypes';
 import JobLocationTypeLinks from '@/components/links/JobLocationTypeLinks';
 import LinkList from '@/components/LinkList';
 import LinkListWithHeadings from '@/components/LinkListWithHeadings';
+import HeroBannerPortrait from '@/components/HeroBannerPortrait';
 // import { useState, useEffect } from 'react';
 // import Image from 'next/image';
 // import Link from 'next/link';
@@ -64,6 +64,39 @@ const schoolTypes = [
   { name: `Steiner`, href: `/steiner-school-jobs` },
   { name: `Montessori`, href: `/montessori-school-jobs` },
   // { name: `Independent`, href: `/independent-public-school-jobs` },
+];
+
+const schoolProfileHeadShots = [
+  {
+    src: '/home/teacher2.jpeg',
+    alt: 'Early Childhood Teachers',
+    label: 'Early Childhood',
+    link: `/early-childhood-jobs`,
+  },
+  {
+    src: '/home/academic-student-positions.png',
+    alt: 'Primary School Positions',
+    label: 'Primary',
+    link: `/primary-jobs`,
+  },
+  {
+    src: '/home/teacher3.jpeg',
+    alt: 'Secondary School Jobs',
+    label: 'Secondary',
+    link: `/secondary-jobs`,
+  },
+  {
+    src: '/home/teacher-4.jpg',
+    alt: 'Teacher Aide Jobs',
+    label: 'Teacher Aide',
+    link: `/teacher-aide-jobs`,
+  },
+  {
+    src: '/home/teacher1.jpeg',
+    alt: 'Administrative Positions',
+    label: 'Admin',
+    link: `/admin-jobs`,
+  },
 ];
 
 const jobsBySchoolAndState = [
@@ -258,9 +291,8 @@ export default async function myPage() {
 
   return (
     <main className="content-grid">
-      <div className="full-width md:h-[400px] h-[229px] bg-gradient-to-br from-pink-600 via-pink-400 to-pink-700">
-        <Top7JobTypes />
-      </div>
+      <HeroBannerPortrait country={'us'} items={schoolProfileHeadShots} />
+
       <div className="flex flex-col items-center justify-center ">
         <div className="w-full md:w-3/6  flex flex-col items-top mt-[6rem]">
           <JobSearchBoxHome />
