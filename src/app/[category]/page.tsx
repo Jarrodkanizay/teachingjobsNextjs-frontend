@@ -145,7 +145,7 @@ export default function Page({ params, searchParams }: any) {
       <AdvancedSearchBar
         p={{
           r: region,
-          filter2: [
+          filter1: [
             {
               category: searchCategory,
               filter: searchFilter,
