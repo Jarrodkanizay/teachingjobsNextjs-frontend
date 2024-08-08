@@ -1,13 +1,10 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from '@/components/brand/Logo';
 import type { Metadata } from 'next';
 import JobSearchBoxHome from '@/components/JobSearchBoxHome';
 import JobCategoryAndLocationLinks from '@/components/links/JobCategoryAndLocationLinks';
-import AusUniLogos from '@/components/AusUniLogos';
-import AmericaUniLogos from '@/components/AmericaUniLogos';
-import Top7JobTypes from '@/components/Top7JobTypes';
+import HeroBannerPortrait from '@/components/HeroBannerPortrait';
 import { getContentRegion } from '@/actions/getContentRegion';
 
 export const metadata: Metadata = {
@@ -17,8 +14,7 @@ export const metadata: Metadata = {
   },
   description:
     'Looking for Teaching Jobs in Australia? Visit our website at Teaching Jobs, to see our range of teaching jobs available near Melbourne, Sydney, Perth and all major cities.',
-  keywords:
-    'Teaching Jobs. TeachingJobs, Teacher Jobs, Teacher positions',
+  keywords: 'Teaching Jobs. TeachingJobs, Teacher Jobs, Teacher positions',
 };
 
 export default async function myPage() {
@@ -30,11 +26,7 @@ export default async function myPage() {
 
   return (
     <main className="content-grid">
-
-
-<div className="full-width md:h-[400px] h-[229px] bg-gradient-to-br from-pink-600 via-pink-400 to-pink-700">
-      <Top7JobTypes/>
-      </div> 
+      <HeroBannerPortrait />
 
       <div className="flex flex-col items-center justify-center ">
         {/* <div className="h-[15vh] flex flex-col items-end justify-end mb-8">
@@ -43,55 +35,50 @@ export default async function myPage() {
           </Link>
         </div> */}
         {/* Job Search Form */}
-        <div className="w-full md:w-3/6  flex flex-col items-top mt-[6rem]">
+        <div className="w-full md:w-3/6  flex flex-col items-top">
           <JobSearchBoxHome />
         </div>
       </div>
 
+      <ul className=" mb-4 text-center justify-center flex gap-4  mt-8 h-auto w-full text-transform: capitalize text-gray-500 flex-wrap">
+        <li className="pb-2 flex hover:underline ">
+          <a href="/melbourne/">melbourne</a>
+        </li>
+        <li className="pb-2 flex  hover:underline">
+          <a href="/sydney/">sydney</a>
+        </li>
+        <li className="pb-2 flex md:break hover:underline">
+          <a href="/brisbane/">brisbane</a>
+        </li>
+        <li className="pb-2 flex md:break hover:underline">
+          <a href="/gold-coast/">gold coast</a>
+        </li>
 
-   
-    
-        <ul className=" mb-4 text-center justify-center flex gap-4  mt-8 h-auto w-full text-transform: capitalize text-gray-500 flex-wrap">
-          <li className="pb-2 flex hover:underline ">
-            <a href="/melbourne/">melbourne</a>
-          </li>
-          <li className="pb-2 flex  hover:underline">
-            <a href="/sydney/">sydney</a>
-          </li>
-          <li className="pb-2 flex md:break hover:underline">
-            <a href="/brisbane/">brisbane</a>
-          </li>
-          <li className="pb-2 flex md:break hover:underline">
-            <a href="/gold-coast/">gold coast</a>
-          </li>
+        <li className="pb-2 flex  hover:underline">
+          <a href="/canberra/">canberra</a>
+        </li>
+        <li className="pb-2 flex md:break hover:underline">
+          <a href="/perth/">perth</a>
+        </li>
+        <li className="pb-2 flex md:break hover:underline">
+          <a href="/adelaide/">adelaide</a>
+        </li>
+        <li className="pb-2 flex md:break hover:underline">
+          <a href="/darwin/">darwin</a>
+        </li>
+      </ul>
 
-          <li className="pb-2 flex  hover:underline">
-            <a href="/canberra/">canberra</a>
-          </li>
-          <li className="pb-2 flex md:break hover:underline">
-            <a href="/perth/">perth</a>
-          </li>
-          <li className="pb-2 flex md:break hover:underline">
-            <a href="/adelaide/">adelaide</a>
-          </li>
-          <li className="pb-2 flex md:break hover:underline">
-            <a href="/darwin/">darwin</a>
-          </li>
-        </ul>
-    
       <JobCategoryAndLocationLinks />
 
-
       <div className="mt-12 rounded-t-3xl  mx-auto border-8 pb-16 ">
-          <Image
-                  src="/job-ads/banner2.jpg"
-                  alt="global"
-                  width={1280}
-                  height={750}
-                  className="rounded-t-2xl border-8 mb-[-4rem]"
-                />
-              </div>
-
+        <Image
+          src="/job-ads/banner2.jpg"
+          alt="global"
+          width={1280}
+          height={750}
+          className="rounded-t-2xl border-8 mb-[-4rem]"
+        />
+      </div>
 
       <div id="section" className="bg-slate-200 full-width py-12 mb-16 ">
         <div className="md:hero-content flex flex-col lg:flex-row mx-auto md:items-start py-12">
@@ -752,9 +739,7 @@ export default async function myPage() {
                     </Link>
                   </li>
                   <li className="mb-2 ">
-                    <Link href="/employers/">
-                      Fintona girls school
-                    </Link>
+                    <Link href="/employers/">Fintona girls school</Link>
                   </li>
                 </ul>
               </ul>
@@ -762,7 +747,10 @@ export default async function myPage() {
             <div className="column">
               <ul className="">
                 <li className="mb-1 mt-4">
-                  <Link href="/queensland/" className="text-[#e74b7f] font-bold">
+                  <Link
+                    href="/queensland/"
+                    className="text-[#e74b7f] font-bold"
+                  >
                     Queensland
                   </Link>
                 </li>
@@ -810,7 +798,10 @@ export default async function myPage() {
             <div className="column">
               <ul className="">
                 <li className="mb-1 mt-4">
-                  <Link href="/western-australia/" className="text-[#e74b7f] font-bold">
+                  <Link
+                    href="/western-australia/"
+                    className="text-[#e74b7f] font-bold"
+                  >
                     Western Australia
                   </Link>
                 </li>
@@ -828,7 +819,10 @@ export default async function myPage() {
                   </li>
                 </ul>
                 <li className="mb-1 mt-4">
-                  <Link href="/south-australia/" className="text-[#e74b7f] font-bold">
+                  <Link
+                    href="/south-australia/"
+                    className="text-[#e74b7f] font-bold"
+                  >
                     South Australia
                   </Link>
                 </li>
@@ -840,7 +834,10 @@ export default async function myPage() {
                   </li>
                 </ul>
                 <li className="mb-1 mt-4">
-                  <Link href="/northern-territory/" className="text-[#e74b7f] font-bold">
+                  <Link
+                    href="/northern-territory/"
+                    className="text-[#e74b7f] font-bold"
+                  >
                     Northern Territory
                   </Link>
                 </li>

@@ -6,11 +6,46 @@ type Props = {
   // h1: string;
   // h1_mobile: string;
   country?: string;
-  items: any;
+  schoolProfileHeadShots?: any;
   size?: number;
 };
 
-const HeroBannerPortrait = ({ country = '', items, size = 130 }: Props) => {
+const HeroBannerPortrait = ({
+  country = '',
+  schoolProfileHeadShots = [
+    {
+      src: '/home/teacher2.jpeg',
+      alt: 'Early Childhood Teachers',
+      label: 'Early Childhood',
+      link: `/early-childhood-jobs`,
+    },
+    {
+      src: '/home/academic-student-positions.png',
+      alt: 'Primary School Positions',
+      label: 'Primary',
+      link: `/primary-jobs`,
+    },
+    {
+      src: '/home/teacher3.jpeg',
+      alt: 'Secondary School Jobs',
+      label: 'Secondary',
+      link: `/secondary-jobs`,
+    },
+    {
+      src: '/home/teacher-4.jpg',
+      alt: 'Teacher Aide Jobs',
+      label: 'Teacher Aide',
+      link: `/teacher-aide-jobs`,
+    },
+    {
+      src: '/home/teacher1.jpeg',
+      alt: 'Administrative Positions',
+      label: 'Admin',
+      link: `/admin-jobs`,
+    },
+  ],
+  size = 130,
+}: Props) => {
   return (
     <>
       <div
@@ -25,7 +60,7 @@ const HeroBannerPortrait = ({ country = '', items, size = 130 }: Props) => {
         </div>
       </div>
       <ul className="hero-icons hide relative flex gap-2 md:gap-5 mx-auto text-center items-center justify-between md:justify-center mt-[-5rem] p-4 z-20">
-        {items.map((item: any, index: number) => (
+        {schoolProfileHeadShots.map((item: any, index: number) => (
           <li key={index} className="">
             <Link className="grayscale hover:grayscale-0" href={item.link}>
               <Image src={item.src} width={size} height={size} alt={item.alt} />

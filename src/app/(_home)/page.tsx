@@ -66,39 +66,6 @@ const schoolTypes = [
   // { name: `Independent`, href: `/independent-public-school-jobs` },
 ];
 
-const schoolProfileHeadShots = [
-  {
-    src: '/home/teacher2.jpeg',
-    alt: 'Early Childhood Teachers',
-    label: 'Early Childhood',
-    link: `/early-childhood-jobs`,
-  },
-  {
-    src: '/home/academic-student-positions.png',
-    alt: 'Primary School Positions',
-    label: 'Primary',
-    link: `/primary-jobs`,
-  },
-  {
-    src: '/home/teacher3.jpeg',
-    alt: 'Secondary School Jobs',
-    label: 'Secondary',
-    link: `/secondary-jobs`,
-  },
-  {
-    src: '/home/teacher-4.jpg',
-    alt: 'Teacher Aide Jobs',
-    label: 'Teacher Aide',
-    link: `/teacher-aide-jobs`,
-  },
-  {
-    src: '/home/teacher1.jpeg',
-    alt: 'Administrative Positions',
-    label: 'Admin',
-    link: `/admin-jobs`,
-  },
-];
-
 const jobsBySchoolAndState = [
   {
     name: `NSW`,
@@ -291,10 +258,10 @@ export default async function myPage() {
 
   return (
     <main className="content-grid">
-      <HeroBannerPortrait country={'us'} items={schoolProfileHeadShots} />
+      <HeroBannerPortrait />
 
       <div className="flex flex-col items-center justify-center ">
-        <div className="w-full md:w-3/6  flex flex-col items-top mt-[6rem]">
+        <div className="w-full md:w-3/6  flex flex-col items-top">
           <JobSearchBoxHome />
         </div>
       </div>
