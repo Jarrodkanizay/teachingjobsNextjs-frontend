@@ -293,7 +293,11 @@ export default async function myPage() {
       </ul>
       <JobLocationTypeLinks
         positionLinks={[
-          { name: 'Science', href: '/science-teacher-jobs' },
+          {
+            name: 'Science',
+            href: `/science-teacher-jobs`,
+            // href: `/science-teacher-jobs?r=Australia&l=Australia&q=&lon=&lat=&page=0&category=&currentMiddleCategory=&filter0=[{"category":"subject","filter":"science"}]&mode=default`,
+          },
           { name: 'Maths', href: '/maths-teacher-jobs' },
           { name: 'English', href: '/english-teacher-jobs' },
           { name: 'Art', href: '/art-teacher-jobs' },
