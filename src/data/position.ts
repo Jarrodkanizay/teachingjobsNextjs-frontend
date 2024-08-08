@@ -173,6 +173,8 @@ const positionData = [
     h2_footer: `Math Teacher Opportunities in Australia`,
     content_footer: `Explore rewarding maths teacher jobs in primary and secondary schools. As a maths teacher, you'll create engaging lessons, distribute learning materials, grade assignments, and help students understand mathematical concepts. To qualify, you need a bachelor’s degree in education with a focus on mathematics, teaching experience, and strong communication skills. Ready to inspire the next generation? Apply now!`,
     type: `country`,
+    searchCategory: 'subject',
+    searchFilter: 'Mathematics',
   },
   {
     Name: `maths teacher jobs melbourne`,
