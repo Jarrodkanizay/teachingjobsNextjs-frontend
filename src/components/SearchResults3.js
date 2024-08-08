@@ -26,7 +26,7 @@ export default function SearchResults2({p={},
 
   const [page, setPage] = useState(0);
   let searchParams1 = {}
-  //alert(JSON.stringify(p))
+  ////alert(JSON.stringify(p))
   if (Object.keys(p).length !== 0) {
     searchParams1 = { ...searchParams, ...p }
   } else {

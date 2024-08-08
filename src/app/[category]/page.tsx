@@ -8,6 +8,7 @@ import LinkIcon from '@/components/icons/LinkIcon';
 import JobFilter from '@/components/JobFilter';
 import Link from 'next/link';
 import AdvancedSearchBar from '@/components/AdvancedSearchBar';
+import SearchResults3 from '@/components/SearchResults3';
 
 function toTitleCase(str: string) {
   return str.toLowerCase().replace(/(?:^|\s)\w/g, function (match: string) {
@@ -202,7 +203,8 @@ export default function Page({ params, searchParams }: any) {
         </div>
         <div className="listings_panel">
           <div className="listings_content">
-            <SearchResults q={{ q: '', l: '', filter1 }} />
+            <SearchResults3 />
+            {/* <SearchResults q={{ q: '', l: '', filter1 }} /> */}
           </div>
         </div>
       </section>
