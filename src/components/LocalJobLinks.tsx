@@ -39,7 +39,7 @@ const LocalJobLinks = ({
     category3 = '',
     filter3 = '',
     alt = '',
-    type = 'country',
+    type = '',
   } = localObj;
 
   // TODO: adjust and add these back when query strings are working

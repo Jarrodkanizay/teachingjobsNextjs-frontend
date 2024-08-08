@@ -15,9 +15,6 @@ function toTitleCase(str: string) {
   });
 }
 
-let type = '';
-let region = '';
-
 const australiaLocations = {
   states: [
     'Australian Capital Territory',
@@ -124,13 +121,16 @@ export default function Page({ params, searchParams }: any) {
     filter,
     searchCategory = '',
     searchFilter = '',
-    type = '',
+    type,
   } = localObj;
+
+  let region = '';
 
   if (filter === undefined) filter = { l: '' };
 
   region = filter.l;
-  let heading = Title;
+
+  // let heading = Title;
 
   let categoryProperCase = toTitleCase(category).trim();
   let shortName = categoryProperCase;
@@ -156,10 +156,10 @@ export default function Page({ params, searchParams }: any) {
       {/* <JobSearchBox /> */}
 
       <section className="jobs_grid job_post_search_container mx-auto">
-        <div className="filters_panel pt-12">
-          <p>{type}</p>
+        <div className="filters_panel pt-8">
+          {/* <p>{type}</p>
           <p>{searchFilter}</p>
-          <p>{shortName}</p>
+          <p>{shortName}</p> */}
 
           {type === 'city' ? (
             <>
@@ -187,18 +187,16 @@ export default function Page({ params, searchParams }: any) {
                 </nav>
               </div>
             </>
-          ) : (
-            <>
-              <LocalJobLinks
-                heading="Browse by City"
-                localObj={localObj}
-                locations={australiaLocations.cities}
-                region={region}
-                category={categoryProperCase}
-                shortName={shortName}
-              />
-            </>
-          )}
+          ) : null}
+          <LocalJobLinks
+            heading="Browse by City"
+            localObj={localObj}
+            locations={australiaLocations.cities}
+            region={region}
+            category={categoryProperCase}
+            shortName={shortName}
+          />
+
           <h2 className="text-[22px] text-gray-blue leading-tight">
             {h2_footer}
           </h2>
