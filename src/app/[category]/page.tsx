@@ -124,11 +124,9 @@ export default function Page({ params, searchParams }: any) {
     type,
   } = localObj;
 
-  let region = '';
+  let region = 'Australia';
 
   if (filter === undefined) filter = { l: '' };
-
-  region = filter.l;
 
   // let heading = Title;
 
@@ -140,11 +138,12 @@ export default function Page({ params, searchParams }: any) {
   //const { logo, company_name, website, company_description, location } = data
   //console.log(company_description)
   content = (
-    <div className="content-grid flex-col md:gap-2">
+    <>
       <HeroBannerGhostedBlock heroItem={localObj} forceClass="mb-8" />
       <AdvancedSearchBar
         p={{
           r: region,
+          l: filter.l,
           filter1: [
             {
               category: searchCategory,
@@ -160,6 +159,14 @@ export default function Page({ params, searchParams }: any) {
           {/* <p>{type}</p>
           <p>{searchFilter}</p>
           <p>{shortName}</p> */}
+          {/* <p>
+            <strong>Region: </strong>
+            {region}
+          </p>
+          <p>
+            <strong>Location: </strong>
+            {filter.l}
+          </p> */}
 
           {type === 'city' ? (
             <>
@@ -209,7 +216,7 @@ export default function Page({ params, searchParams }: any) {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
   return <main className="overflow-y w-full">{content}</main>;
 }

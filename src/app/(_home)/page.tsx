@@ -260,11 +260,10 @@ export default async function myPage() {
     <main className="content-grid">
       <HeroBannerPortrait />
 
-      <div className="flex flex-col items-center justify-center ">
-        <div className="w-full md:w-3/6  flex flex-col items-top">
-          <JobSearchBoxHome />
-        </div>
+      <div className="w-full max-w-2xl mx-auto">
+        <JobSearchBoxHome />
       </div>
+
       <ul className=" mb-4 text-center justify-center flex gap-4  mt-8 h-auto w-full text-transform: capitalize text-gray-500 flex-wrap">
         <li className="pb-2 flex hover:underline ">
           <a href="/melbourne">melbourne</a>
