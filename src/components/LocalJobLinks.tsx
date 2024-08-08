@@ -39,7 +39,7 @@ const LocalJobLinks = ({
     category3 = '',
     filter3 = '',
     alt = '',
-    type = '',
+    type = 'country',
   } = localObj;
 
   // TODO: adjust and add these back when query strings are working
@@ -52,32 +52,35 @@ const LocalJobLinks = ({
 
   return (
     <>
-      {category.toLowerCase() === 'indigenous' ? null : (
-        <div className="links_section mb-16">
-          {/* <p>{filter2}</p>
+      {type === 'country' ? (
+        category.toLowerCase() === 'indigenous' ? null : (
+          <div className="links_section mb-16">
+            {/* <p>{filter2}</p>
           <p>{filter3}</p> */}
-          <h2>{heading}</h2>
-          <nav aria-label={heading}>
-            <ul>
-              {locations.map((location: any) => (
-                <li key={location}>
-                  <p>
-                    <Link
-                      href={`${category
-                        .toLowerCase()
-                        .replace(/\s+/g, '-')}-${location
-                        .toLowerCase()
-                        .replace(/\s+/g, '-')}`}
-                    >
-                      <LinkIcon forceClass="pink_icon" /> {shortName} {location}
-                    </Link>
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      )}
+            <h2>{heading}</h2>
+            <nav aria-label={heading}>
+              <ul>
+                {locations.map((location: any) => (
+                  <li key={location}>
+                    <p>
+                      <Link
+                        href={`${category
+                          .toLowerCase()
+                          .replace(/\s+/g, '-')}-${location
+                          .toLowerCase()
+                          .replace(/\s+/g, '-')}`}
+                      >
+                        <LinkIcon forceClass="pink_icon" /> {shortName}{' '}
+                        {location}
+                      </Link>
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        )
+      ) : null}
     </>
   );
 };

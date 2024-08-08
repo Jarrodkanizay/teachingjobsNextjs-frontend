@@ -1,6 +1,6 @@
 // import Link from 'next/link';
 import positionData from '@/data/position';
-import SearchResults from '@/components/SearchResults';
+import SearchResults3 from '@/components/SearchResults3';
 import JobSearchBox from '@/components/JobSearchBox';
 import LocalJobLinks from '@/components/LocalJobLinks';
 import HeroBannerGhostedBlock from '@/components/HeroBannerGhostedBlock';
@@ -121,22 +121,22 @@ export default function Page({ params, searchParams }: any) {
     h2_footer = '',
     content_footer = '',
     Image: imageSrc = '',
-    category1 = '',
-    filter1 = '',
-    category2 = '',
-    filter2 = '',
-    category3 = '',
-    filter3 = '',
+    filter,
+    searchCategory = '',
+    searchFilter = '',
     type = '',
   } = localObj;
 
+  if (filter === undefined) filter = { l: '' };
+
+  region = filter.l;
   let heading = Title;
 
   let categoryProperCase = toTitleCase(category).trim();
   let shortName = categoryProperCase;
 
   let content: any;
-  console.log({ category2, filter2 });
+  console.log({ searchCategory, searchFilter });
   //const { logo, company_name, website, company_description, location } = data
   //console.log(company_description)
   content = (
@@ -145,10 +145,10 @@ export default function Page({ params, searchParams }: any) {
       <AdvancedSearchBar
         p={{
           r: region,
-          filter1: [
+          filter2: [
             {
-              category: category2,
-              filter: filter2,
+              category: searchCategory,
+              filter: searchFilter,
             },
           ],
         }}
@@ -157,6 +157,10 @@ export default function Page({ params, searchParams }: any) {
 
       <section className="jobs_grid job_post_search_container mx-auto">
         <div className="filters_panel pt-12">
+          <p>{type}</p>
+          <p>{searchFilter}</p>
+          <p>{shortName}</p>
+
           {type === 'city' ? (
             <>
               <div className="links_section mb-16">
@@ -167,7 +171,7 @@ export default function Page({ params, searchParams }: any) {
                       // Prevent the current category (filter2) from being listed in the related jobs
                       .filter(
                         (link) =>
-                          link.name.toLowerCase() !== filter2.toLowerCase()
+                          link.name.toLowerCase() !== searchFilter.toLowerCase()
                       )
                       .map((link, index) => (
                         <li key={index}>
@@ -202,7 +206,10 @@ export default function Page({ params, searchParams }: any) {
         </div>
         <div className="listings_panel">
           <div className="listings_content">
-            <SearchResults q={{ q: '', l: category2, filter2 }} />
+            <SearchResults3 />
+            {/* <SearchResults
+              q={{ q: '', l: searchCategory, filter1: searchFilter }}
+            /> */}
           </div>
         </div>
       </section>

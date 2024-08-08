@@ -1,18 +1,80 @@
 // import Link from 'next/link';
 import positionData from '@/data/position';
-import SearchResults from '@/components/SearchResults';
+import SearchResults3 from '@/components/SearchResults3';
 import JobSearchBox from '@/components/JobSearchBox';
+import LocalJobLinks from '@/components/LocalJobLinks';
+import HeroBannerGhostedBlock from '@/components/HeroBannerGhostedBlock';
+import LinkIcon from '@/components/icons/LinkIcon';
 import JobFilter from '@/components/JobFilter';
-// import type { Metadata } from 'next';
+import Link from 'next/link';
+import AdvancedSearchBar from '@/components/AdvancedSearchBar';
 
-type MetadataTypes = {
-  Name?: string | undefined;
-  Title?: string | undefined;
-  Description?: string | undefined;
-  Keyword?: string | undefined;
-  content?: any | undefined;
-  filter1?: [] | undefined;
+function toTitleCase(str: string) {
+  return str.toLowerCase().replace(/(?:^|\s)\w/g, function (match: string) {
+    return match.toUpperCase();
+  });
+}
+
+let type = '';
+let region = '';
+
+const australiaLocations = {
+  states: [
+    'Australian Capital Territory',
+    'New South Wales',
+    'Northern Territory',
+    'Queensland',
+    'South Australia',
+    'Tasmania',
+    'Victoria',
+    'Western Australia',
+  ],
+  cities: [
+    'Adelaide',
+    'Brisbane',
+    'Gold Coast',
+    'Canberra',
+    'Melbourne',
+    'Perth',
+    'Sydney',
+    'Tasmania',
+  ],
 };
+
+const regionLinks = [
+  {
+    name: `Teacher Jobs`,
+    url: `/`,
+  },
+  {
+    name: `Science Teacher`,
+    url: `science-teacher-jobs`,
+  },
+  {
+    name: `Mathematics Teacher`,
+    url: `/maths-teacher-jobs`,
+  },
+  {
+    name: `English Teacher`,
+    url: `/english-teacher-jobs`,
+  },
+  {
+    name: `Art Teacher`,
+    url: `/art-teacher-jobs`,
+  },
+  {
+    name: `Music Teacher`,
+    url: `/music-teacher-jobs`,
+  },
+  {
+    name: `History Teacher`,
+    url: `/history-teacher-jobs`,
+  },
+  {
+    name: `Physical Education Teacher`,
+    url: `/pe-teacher-jobs`,
+  },
+];
 
 export async function generateMetadata({ params, searchParams }: any) {
   // console.log(params)
@@ -39,72 +101,119 @@ export async function generateMetadata({ params, searchParams }: any) {
 
 //const Lecturer = () => {
 export default function Page({ params, searchParams }: any) {
-  // console.log("````````````````````params````````````````````")
-  // console.log(params)
-  let { category } = params;
-  // console.log(positionData)
-
+  let { category, location } = params;
   category = category?.replace(/-/g, ' ');
-  // console.log(category);
-  console.log('category', category);
-  console.log('positionData', positionData);
-  const city = positionData.find((item) => item.Name === category);
+  location = location?.replace(/-/g, ' ');
 
-  if (!city) {
-    console.error('City not found');
-    //return null; // or return an error component, or handle this situation in another appropriate way
-  }
+  const defaultItem = positionData.find((item) => item.Name === 'generic');
 
-  const {
-    filter1,
-    Name,
-    Title,
-    Description,
-    Keyword,
-    content: content1,
-  } = city;
+  const localObj =
+    positionData.find((item) => item.Name === category) || defaultItem;
 
-  let content;
-  //console.log(Name);
+  let {
+    Name = '',
+    Title = '',
+    h1 = '',
+    h2 = '',
+    Description = '',
+    Keyword = '',
+    content: content1 = '',
+    h2_footer = '',
+    content_footer = '',
+    Image: imageSrc = '',
+    filter,
+    searchCategory = '',
+    searchFilter = '',
+    type = '',
+  } = localObj;
+
+  if (filter === undefined) filter = { l: '' };
+
+  region = filter.l;
+  let heading = Title;
+
+  let categoryProperCase = toTitleCase(category).trim();
+  let shortName = categoryProperCase;
+
+  let content: any;
+  console.log({ searchCategory, searchFilter });
   //const { logo, company_name, website, company_description, location } = data
   //console.log(company_description)
   content = (
     <div className="content-grid flex-col md:gap-2">
-      {/* <Link className="text-[#e74b7f] " href="/position/">
-        View all Lecturer Jobs →
-      </Link> */}
+      <HeroBannerGhostedBlock heroItem={localObj} forceClass="mb-8" />
+      <AdvancedSearchBar
+        p={{
+          r: region,
+          filter2: [
+            {
+              category: searchCategory,
+              filter: searchFilter,
+            },
+          ],
+        }}
+      />
+      {/* <JobSearchBox /> */}
 
-      <div className="bg-slate-200 full-width">
-        <div className="  hero-content flex-col lg:flex-row mx-auto items-start py-12">
-          <h1 className="md:text-6xl font-bold  md:text-right text-gray-500 pb-4 capitalize m-0">
-            {Title}
-          </h1>
-          <p className="px-7 mb-4 mt-1">
-            <span className="font-bold">
-              Find all School Positions on Teaching Jobs Today.
-            </span>
-            <br />
-            <br />
-            {content1}
-          </p>
-        </div>
-      </div>
+      <section className="jobs_grid job_post_search_container mx-auto">
+        <div className="filters_panel pt-12">
+          <p>{type}</p>
+          <p>{searchFilter}</p>
+          <p>{shortName}</p>
 
-      <JobSearchBox />
-
-      <section className=" job_post_search_container mx-auto">
-        <div className="filters_panel">
-          {/* <div className="filters_content">
-            <JobFilter />
-          </div> */}
+          {type === 'city' ? (
+            <>
+              <div className="links_section mb-16">
+                <h2>Other related jobs</h2>
+                <nav aria-label="Other related jobs">
+                  <ul>
+                    {regionLinks
+                      // Prevent the current category (filter2) from being listed in the related jobs
+                      .filter(
+                        (link) =>
+                          link.name.toLowerCase() !== searchFilter.toLowerCase()
+                      )
+                      .map((link, index) => (
+                        <li key={index}>
+                          <p>
+                            <Link href={link.url}>
+                              <LinkIcon forceClass="pink_icon" /> {link.name}{' '}
+                              Jobs
+                            </Link>
+                          </p>
+                        </li>
+                      ))}
+                  </ul>
+                </nav>
+              </div>
+            </>
+          ) : (
+            <>
+              <LocalJobLinks
+                heading="Browse by City"
+                localObj={localObj}
+                locations={australiaLocations.cities}
+                region={region}
+                category={categoryProperCase}
+                shortName={shortName}
+              />
+            </>
+          )}
+          <h2 className="text-[22px] text-gray-blue leading-tight">
+            {h2_footer}
+          </h2>
+          <p className="mb-16">{content_footer}</p>
         </div>
         <div className="listings_panel">
           <div className="listings_content">
-            <SearchResults q={{ q: '', l: '', filter1 }} />
+            <SearchResults3 />
+            {/* <SearchResults
+              q={{ q: '', l: searchCategory, filter1: searchFilter }}
+            /> */}
           </div>
         </div>
       </section>
     </div>
   );
-  return <div className="overflow-y w-full">{content}</div>;
+  return <main className="overflow-y w-full">{content}</main>;
 }
