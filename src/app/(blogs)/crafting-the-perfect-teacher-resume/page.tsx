@@ -5,10 +5,9 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      'Crafting the Perfect Teacher Resume: Expert Tips for Landing Your Dream Teaching Job',
+    absolute: '10 Teacher Resume Tips: Get more interviews! (With Template)',
   },
-  description: `Discover essential tips for creating an effective teacher resume. Learn how to highlight your skills, quantify achievements, and avoid common pitfalls to stand out in the competitive job market and secure your ideal teaching position.`,
+  description: `Need more interviews? Craft the perfect teacher resume with 10 expert advice from school recruiters. Get noticed and hired fast! Free Templates provided.`,
   keywords: `teacher resume tips, crafting teacher resume, teacher CV advice, teaching job application, educational resume writing, standout teacher resume, teacher job search, educator resume guide, resume tips for teachers, teacher resume examples`,
 };
 
