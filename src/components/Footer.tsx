@@ -19,7 +19,9 @@ const Footer = () => {
             </li>
 
             <li>
-              <Link href="/sitemap">Site Map</Link>
+              <Link href="/teaching-jobs-advice">
+                Teaching Career Help & Advice
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,5 +1,21 @@
 export const blogData = [
   {
+    status: `published`,
+    rank: 0,
+    title: 'How to prepare for a teacher Interview?',
+    slug: ``,
+    customSlug: `/how-to-prepare-for-a-teacher-interview`,
+    author: `Raymond Mulyawan`,
+    published_at: '2024-08-09',
+    updated_at: ``,
+    image_url: `/blogs/teacher-interview/interview-teachers.jpg`,
+    alt: `Preparing for a teacher Interview`,
+    summary: `Congratulations! You've secured an interview for a teaching position at your desired school. This is an exciting first step, but remember, many qualified candidates are likely vying for the same spot.`,
+    tags: ['Branding'],
+    keywords: '',
+    content: `Custom blog see… /how-to-prepare-for-a-teacher-interview`,
+  },
+  {
     status: 'published',
     rank: 0,
     title: `Revolutionize Your Resume: 2021 Trends to Land Your Dream Job`,

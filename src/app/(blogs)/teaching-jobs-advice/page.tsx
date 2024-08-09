@@ -45,7 +45,7 @@ export default function BlogPosts({
   const showDates = false;
 
   // Pagination setting
-  const routeName = 'career-help';
+  const routeName = 'teaching-jobs-advice';
   const routePath = `/${routeName}/`;
 
   const page = searchParams['page'] ?? '1';
@@ -69,7 +69,6 @@ export default function BlogPosts({
       />
 
       <h2 className="underline-full mb-8">
-        {' '}
         Top Career Help for Teachers, Students & Parents
       </h2>
 
@@ -79,7 +78,11 @@ export default function BlogPosts({
             {blogData.slice(0, topListCount).map((post, index) => (
               <article key={index} className="card bg-slate-100 shadow-xl">
                 <figure>
-                  <Link href={routePath + post.slug}>
+                  <Link
+                    href={
+                      post.customSlug ? post.customSlug : routePath + post.slug
+                    }
+                  >
                     <Image
                       src={post.image_url}
                       alt={post.alt}
@@ -92,7 +95,11 @@ export default function BlogPosts({
                 <div className="card-body">
                   <h2 className="card-title grow line-clamp-4 m-0 min-h-[130px]">
                     <Link
-                      href={routePath + post.slug}
+                      href={
+                        post.customSlug
+                          ? post.customSlug
+                          : routePath + post.slug
+                      }
                       className="hover:text-blue-900 text-2xl"
                     >
                       {post.title}
@@ -119,7 +126,11 @@ export default function BlogPosts({
                   </p>
                   <div className="card-actions justify-end">
                     <Link
-                      href={routePath + post.slug}
+                      href={
+                        post.customSlug
+                          ? post.customSlug
+                          : routePath + post.slug
+                      }
                       className="btn btn-aj btn-sm"
                     >
                       Read more
@@ -150,58 +161,76 @@ export default function BlogPosts({
             ></iframe>
           </div> */}
 
-          <h2 id="pagination" className="underline-full mt-16 mb-8">
-            Teaching Recruitment & Career Blog Posts
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mb-8">
-            {entries.map((post, index) => (
-              <article
-                key={index}
-                className="card bg-slate-100 shadow-xl image-full items-stretch relative"
-                style={{
-                  backgroundImage: `url(${post.image_url})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              >
-                <figure className="aspect-w-16 aspect-h-9">
-                  <Link href={routePath + post.slug}>
-                    <Image
-                      src={post.image_url}
-                      alt={post.alt}
-                      width={800}
-                      height={800}
-                    />
-                  </Link>
-                </figure>
-                <div className="card-body p-6">
-                  <h2 className="card-title line-clamp-3 leading-tight">
-                    <Link
-                      href={routePath + post.slug}
-                      className="text-white hover:text-blue-900 text-lg"
-                    >
-                      {post.title}
-                    </Link>
-                  </h2>
-                  <div className="card-actions justify-end mt-auto">
-                    <Link
-                      href={routePath + post.slug}
-                      className="btn btn-aj btn-sm"
-                    >
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-          <PaginationControls
-            hasNextPage={end < blogData.length}
-            hasPrevPage={start > topListCount}
-            pagePath={routeName}
-            itemCount={blogData.length}
-            limitPerPage={per_page}
-          />
+          {entries.length > 0 ? (
+            <>
+              <h2 id="pagination" className="underline-full mt-16 mb-8">
+                Teaching Recruitment & Career Blog Posts
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mb-8">
+                {entries.map((post, index) => (
+                  <article
+                    key={index}
+                    className="card bg-slate-100 shadow-xl image-full items-stretch relative"
+                    style={{
+                      backgroundImage: `url(${post.image_url})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  >
+                    <figure className="aspect-w-16 aspect-h-9">
+                      <Link
+                        href={
+                          post.customSlug
+                            ? post.customSlug
+                            : routePath + post.slug
+                        }
+                      >
+                        <Image
+                          src={post.image_url}
+                          alt={post.alt}
+                          width={800}
+                          height={800}
+                        />
+                      </Link>
+                    </figure>
+                    <div className="card-body p-6">
+                      <h2 className="card-title line-clamp-3 leading-tight">
+                        <Link
+                          href={
+                            post.customSlug
+                              ? post.customSlug
+                              : routePath + post.slug
+                          }
+                          className="text-white hover:text-blue-900 text-lg"
+                        >
+                          {post.title}
+                        </Link>
+                      </h2>
+                      <div className="card-actions justify-end mt-auto">
+                        <Link
+                          href={
+                            post.customSlug
+                              ? post.customSlug
+                              : routePath + post.slug
+                          }
+                          className="btn btn-aj btn-sm"
+                        >
+                          Read more
+                        </Link>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+              <PaginationControls
+                hasNextPage={end < blogData.length}
+                hasPrevPage={start > topListCount}
+                pagePath={routeName}
+                itemCount={blogData.length}
+                limitPerPage={per_page}
+              />
+            </>
+          ) : null}
         </>
       ) : (
         <div>Something went wrong loading the Blogs.</div>

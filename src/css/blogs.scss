@@ -10,4 +10,133 @@ html {
       }
     }
   }
+
+  .blog_article {
+    h2 {
+      color: var(--color-gray-blue);
+    }
+    h2:first-child {
+      margin-top: -12px;
+      margin-bottom: 1.2rem;
+    }
+    h3 {
+      margin-top: 1rem;
+      margin-top: 0;
+    }
+    p {
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+    .tips {
+      color: var(--color-gray-blue);
+      margin: 0;
+      text-transform: uppercase;
+    }
+    ol {
+      list-style-type: decimal;
+      margin-left: 2.5rem;
+    }
+  }
+  .carousel {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+  .carousel-item {
+    scroll-snap-align: start;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .content-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 10px;
+  }
+  .content-layout.cols-2 {
+    grid-template-columns: 1fr 4fr;
+    gap: 20px;
+  }
+
+  .toc {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+    z-index: 1000;
+    background-color: white;
+    padding: 16px;
+    align-self: start;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 4px;
+  }
+
+  .sticky_list {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    align-self: start;
+  }
+
+  .content {
+    padding: 0 20px;
+  }
+
+  .search-box {
+    padding-left: 20px;
+  }
+
+  .toc ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .toc ul li {
+    margin-bottom: 10px;
+  }
+
+  .toc ul li a {
+    text-decoration: underline;
+    color: initial; /* Set the initial color if needed */
+    cursor: pointer;
+  }
+
+  .toc ul li a:hover {
+    color: skyblue;
+  }
+
+  .toc ul ul {
+    margin-left: 20px; /* Indent subheadings */
+    font-size: 0.9em; /* Optional: smaller font size for subheadings */
+  }
+
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    .content-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .toc {
+      position: static; /* Change position to static for mobile */
+      padding-right: 0;
+    }
+
+    .content {
+      padding: 0;
+    }
+
+    .search-box {
+      padding-left: 0;
+    }
+
+    .sticky_list {
+      position: relative;
+    }
+  }
 }
