@@ -62,6 +62,8 @@ export const blogData = [
     keywords: `resume trends 2021, video CVs, personal blogs, YouTube channels, side hustles, job hunting tips`,
     content: `<article class="blog-content">
     <p>Struggling to secure interviews despite a well-crafted resume? With most candidates ticking off the checklist for a perfect resume, standing out requires a fresh strategy. Embrace the latest trends to make your resume shine in the competitive job market.</p>
+        <p>Incorporating these trends into your resume can significantly boost your visibility in a crowded job market. By showcasing your adaptability and creativity through innovative formats like video CVs and personal blogs, you position yourself as a forward-thinking candidate.</p>
+
     <h2>Four Trends to Elevate Your Resume</h2>
     <p>Stay ahead of the curve with these innovative trends:</p>
     <h3>1. Video CVs: A Dynamic Introduction</h3>
