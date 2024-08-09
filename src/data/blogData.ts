@@ -76,7 +76,7 @@ export const blogData = [
     <p>A successful side project illustrates initiative and versatility. Whether it relates directly to your desired role or not, a side hustle highlights your multitasking skills and dedication.</p>
     <h2>Quantify Your Achievements</h2>
     <p>Remember to detail the impact of your endeavors. Did your blog boost web traffic? How did your designs contribute to client success? Concrete results will underline your effectiveness.</p>
-    <p>For recruiters, embracing these trends can also mean rethinking recruitment strategies. Check out <a href="https://www.academicjobs.com/quick-job-post-technology">Quick Job Post Technology</a> to streamline your hiring process and connect with innovative candidates.</p>
+    <p>For recruiters, embracing these trends can also mean rethinking recruitment strategies. Check out <a href="/quick-job-post-technology">Quick Job Post Technology</a> to streamline your hiring process and connect with innovative candidates.</p>
     <p>Adapting your resume to include these trends not only showcases your skills but also demonstrates your adaptability and commitment to personal growth. Make 2021 the year your resume opens doors to exciting opportunities.</p>
 </article>`,
   },
