@@ -405,8 +405,8 @@ export default function myPage() {
               <Image
                 width={1043}
                 height={696}
-                src="/blogs/teacher-interview/hiring-manager-interview-process.jpg"
-                alt="A university lecturer delivering lectures and teaching students in seminars related to their field, with primary responsibilities outlined"
+                src="/blogs/teacher-interview/interview-teachers.jpg"
+                alt="Best questions to ask your interviewer"
                 className="mr-8 mb-8"
               />
 

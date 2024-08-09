@@ -23,7 +23,7 @@ export const blogData = [
     author: `Gabrielle Ryan`,
     published_at: '2024-03-07',
     updated_at: `2024-03-07`,
-    image_url: `/placeholders/placeholder-image.jpg`,
+    image_url: `/blogs/revolutionise-your-cv/cv-banner-image-opener.png`,
     alt: `Creative Resume Ideas`,
     summary: `Discover how to make your resume stand out with these four cutting-edge trends, from video CVs to showcasing your side hustles.`,
     tags: `["Resume Tips", "Career Advancement", "Job Hunting", "Personal Branding", "Digital Trends"]`,
