@@ -5,10 +5,9 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      'High Impact Teaching Strategies: Enhance Student Learning with Proven Methods',
+    absolute: '8 High Impact Teaching Strategies to Boost Classroom Success',
   },
-  description: `Discover High Impact Teaching Strategies (HITS) that enhance student engagement and achievement. Learn how to implement evidence-based instructional practices in your classroom to boost learning outcomes.`,
+  description: `Enhance your teaching with 8 high impact learning strategies designed to drive student success. Get actionable insights for your classroom now!`,
   keywords: `High Impact Teaching Strategies, HITS, student learning, instructional practices, teaching methods, student engagement, classroom strategies, education, effective teaching, differentiated instruction, metacognitive strategies, feedback, collaborative learning`,
 };
 
