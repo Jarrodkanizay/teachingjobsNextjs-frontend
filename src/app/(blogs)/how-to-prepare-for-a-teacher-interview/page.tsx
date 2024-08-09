@@ -5,9 +5,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'how-to-prepare-for-a-teacher-interview',
+    absolute: 'Best Teacher Interview Questions with Answers',
   },
-  description: `Transform your hiring process with effective employer branding. Attract and retain top university talents with these expert tips.`,
+  description: `Ace your teacher interview with our expert guide on common questions and answers. Stand out and secure your dream teaching job!`,
+  keywords: `Teacher interview questions`,
 };
 
 const tableOfContents = [
