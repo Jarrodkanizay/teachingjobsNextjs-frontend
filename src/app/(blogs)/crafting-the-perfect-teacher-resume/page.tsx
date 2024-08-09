@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import SearchResults3 from '@/components/SearchResults3';
 import Card from '@/components/Card';
 import type { Metadata } from 'next';
 
@@ -28,7 +29,7 @@ const tableOfContents = [
 const generateTableOfContents = (
   <>
     <h2 className="text-2xl mb-4">Table of Contents</h2>
-    <ul className="list-none p-0">
+    <ul className="list-none p-0 mb-16">
       {tableOfContents.map((item, index) => (
         <a href={`#${item.anchor}`} key={index}>
           <li className="bg-gray-100 flex-grow text-black border-l-8 border-green-500 hover:border-amber-500 hover:bg-amber-200 rounded-md px-3 py-2 w-full">
@@ -132,6 +133,7 @@ export default function myPage() {
         <section className="content-layout cols-2">
           <nav className="sticky_list mt-[-28px] col-span-2 lg:col-span-1">
             {generateTableOfContents}
+            <SearchResults3 />
           </nav>
 
           <article className="blog_article col-span-2 lg:col-span-1">
@@ -142,11 +144,15 @@ export default function myPage() {
               <Image
                 width={1043}
                 height={696}
-                src="/blogs/expert-resume/teachers.jpg"
+                src="/blogs/expert-resume/teaching-resume-picture.jpg"
                 alt="A university lecturer delivering lectures and teaching students in seminars related to their field, with primary responsibilities outlined"
-                className="mb-16"
+                className="shadow-xl"
               />
-
+            </div>
+            {/* ###################################################################### */}
+            {/* NEW SECTION */}
+            {/* ###################################################################### */}
+            <div className="mb-16">
               <ul className="numbered_list list-none">
                 <li>
                   <h2
@@ -321,6 +327,13 @@ export default function myPage() {
             {/* NEW SECTION */}
             {/* ###################################################################### */}
             <div className="mb-16">
+              <Image
+                width={1043}
+                height={696}
+                src="/blogs/expert-resume/teachers.jpg"
+                alt="A university lecturer delivering lectures and teaching students in seminars related to their field, with primary responsibilities outlined"
+                className="mb-16"
+              />
               <h2
                 id={tableOfContents[10].anchor}
                 className="m-0 leading-relaxed underline-full gray-blue mb-8"
@@ -339,18 +352,6 @@ export default function myPage() {
                 of prospective employers and opens doors to new teaching
                 opportunities.
               </p>
-            </div>
-            {/* ###################################################################### */}
-            {/* NEW SECTION */}
-            {/* ###################################################################### */}
-            <div className="mb-16">
-              <Image
-                width={1043}
-                height={696}
-                src="/blogs/expert-resume/teaching-resume-picture.jpg"
-                alt="A university lecturer delivering lectures and teaching students in seminars related to their field, with primary responsibilities outlined"
-                className="shadow-xl"
-              />
             </div>
           </article>
         </section>

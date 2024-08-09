@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SearchResults3 from '@/components/SearchResults3';
 import Image from 'next/image';
 import Card from '@/components/Card';
 import type { Metadata } from 'next';
@@ -26,7 +27,7 @@ const tableOfContents = [
 const generateTableOfContents = (
   <>
     <h2 className="text-2xl mb-4">Table of Contents</h2>
-    <ul className="list-none p-0">
+    <ul className="list-none p-0 mb-16">
       {tableOfContents.map((item, index) => (
         <a href={`#${item.anchor}`} key={index}>
           <li className="bg-gray-100 flex-grow text-black border-l-8 border-green-500 hover:border-amber-500 hover:bg-amber-200 rounded-md px-3 py-2 w-full">
@@ -123,6 +124,7 @@ export default function myPage() {
         <section className="content-layout cols-2">
           <nav className="sticky_list mt-[-28px] col-span-2 lg:col-span-1">
             {generateTableOfContents}
+            <SearchResults3 />
           </nav>
 
           <article className="blog_article col-span-2 lg:col-span-1">

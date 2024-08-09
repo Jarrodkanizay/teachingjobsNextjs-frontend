@@ -68,11 +68,10 @@ html {
   .content-layout {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    gap: 10px;
+    gap: 3rem;
   }
   .content-layout.cols-2 {
-    grid-template-columns: 1fr 4fr;
-    gap: 20px;
+    grid-template-columns: 3fr 9fr;
   }
 
   .toc {
