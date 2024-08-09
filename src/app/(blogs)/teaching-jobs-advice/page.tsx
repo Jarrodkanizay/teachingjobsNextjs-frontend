@@ -61,8 +61,8 @@ export default function BlogPosts({
         h1="Elevating Your Teaching Career: Collaborative Growth and Professional Insights"
         para1="Unlock the full potential of your teaching career with our dedicated support for educators at every level—from kindergarten to high school. In the dynamic world of education, advancing your career is about more than securing the next position; it's about forging meaningful relationships, collaborating on educational initiatives, and accessing insights that set the stage for enduring success."
         para2="Whether you're igniting young minds in kindergarten, inspiring curiosity in primary school, or preparing high school students for their future, our tailored career advice, tips, and insights from experienced educators are here to empower your journey."
-        src="/blogs/career-assistance-networking-and-collaboration-for-teachers.jpg"
-        alt="People immersed in academic blogs at our vibrant Academic Hub"
+        src="/blogs/elevate-your-teaching-career.jpg"
+        alt="Elevating Your Teaching Career: Collaborative Growth and Professional Insights"
         // btnPrimaryText="Join our Talent Pool"
         // btnPrimaryURL="/talent-pool"
         reorder={false}
