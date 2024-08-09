@@ -1,5 +1,5 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+// 'use client';
+// import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -40,27 +40,27 @@ const HeroBanner = ({
   imgRight = true,
   reorder = true,
   externalLink = false,
-  imageShadow = true,
+  imageShadow = false,
 }: HeroProps) => {
   // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== 'undefined' ? window.innerWidth : 0
-  );
+  // const [windowWidth, setWindowWidth] = useState(
+  //   typeof window !== 'undefined' ? window.innerWidth : 0
+  // );
 
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
+  // useEffect(() => {
+  //   const handleResize = () => setWindowWidth(window.innerWidth);
+  //   window.addEventListener('resize', handleResize);
 
-    // Clean up the event listener on component unmount
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  //   // Clean up the event listener on component unmount
+  //   return () => window.removeEventListener('resize', handleResize);
+  // }, []);
 
   let reorderCss = '';
-  if (reorder) {
-    reorderCss = `order-${windowWidth > 1023 ? 'none' : '1'}`;
-  } else {
-    reorderCss = '';
-  }
+  // if (reorder) {
+  //   reorderCss = `order-${windowWidth > 1023 ? 'none' : '1'}`;
+  // } else {
+  //   reorderCss = '';
+  // }
 
   return (
     <section
